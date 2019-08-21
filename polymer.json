@@ -1,0 +1,21 @@
+{
+  "entrypoint": "index.html",
+  "fragments": [
+  ],
+  "sources": [
+   "manifest/**",
+   "src/**",
+   "package.json"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [
+    { 
+      "preset": "es5-bundled"
+    }
+  ],
+  "moduleResolution": "node",
+  "npm": true
+}
