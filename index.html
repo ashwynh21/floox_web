@@ -5,106 +5,218 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="icon" href="manifest/logo.png">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
+  <link href="style.css" rel="stylesheet"/>
 
-  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js">
+  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
-  </script><script src="./node_modules/trial-js/trial.min.js"></script>
-  <script type="text/javascript" src="./node_modules/animejs/lib/anime.min.js"></script>
-  <script type="text/javascript" src="./node_modules/underscore/underscore-min.js"></script>
+  <script type="module" src="./node_modules/@polymer/paper-icon-button/paper-icon-button.js"></script>
+  <script type="module" src="./node_modules/@polymer/iron-icons/iron-icons.js"></script>
+  <script type="module" src="./node_modules/@polymer/paper-button/paper-button.js"></script>
+  <script type="module" src="./node_modules/@polymer/paper-ripple/paper-ripple.js"></script>
 
-  <script src="src/components/tkt-spinner.js" type="module"></script>
-  <script src="src/components/tkt-logo.js" type="module"></script>
-  <script src="src/components/tkt-p.js" type="module"></script>
-  <script src="src/components/tkt-h.js" type="module"></script>
-  <script src="src/components/tkt-ticket.js" type="module"></script>
-  <script src="src/components/tkt-blob-image.js" type="module"></script>
-  <script src="src/components/tkt-menu.js" type="module"></script>
-  <script src="src/components/tkt-back-image.js" type="module"></script>
+  <script src="src/components/button.js" type="module"></script>
+  <script src="src/components/navigation.js" type="module"></script>
+  <script src="src/components/menu.js" type="module"></script>
+  <script src="src/components/pill.js" type="module"></script>
+  <script src="src/components/floox.js" type="module"></script>
+  <script src="src/components/input.js" type="module"></script>
+  <script src="src/components/rating.js" type="module"></script>
 
-  <title>Ticketer | Home</title>
+  <title>Floox | Home</title>
 </head>
 <body>
-<div class="container-page container-load-page">
-  <tkt-logo id="logo" intro="true" shadow="true"></tkt-logo>
-  <tkt-spinner id="spinner" val="0" color="#FFB50C"></tkt-spinner>
-</div>
-<div class="menu">
-  <div>
-    <tkt-logo id="menu-logo"></tkt-logo>
-    <tkt-h intro="true" id="title">ticketer</tkt-h>
-  </div>
-  <div>
-    <tkt-menu id="menu-icon"></tkt-menu>
-    <div id="menu" style="top:-418px; right:-418px;">
-      <svg version="1.1" id="menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="153.8px" y="153.8px"
-           viewBox="0 0 153.8 153.8" style="enable-background:new 0 0 153.8 153.8;" xml:space="preserve">
-            <path style="fill:#005781;" d="M22.9,0H131c12.6,0,22.8,10.2,22.8,22.8v108.1c0,20.3-24.6,30.5-39,16.1L6.7,39
-            C-7.6,24.6,2.5,0,22.9,0z"/>
-        <path style="fill:#0C4772;" d="M144.5,4.4L25.4,57.6L6.7,39C-7.6,24.6,2.5,0,22.9,0L131,0C136,0,140.7,1.6,144.5,4.4z"/>
-          </svg>
+  <img class="background" src="src/assets/images/background.svg" alt="background"/>
+  <img class="background" src="src/assets/images/panel.svg" alt="background"/>
+  <!--
+  Here we have the tool bar at the top of the application window.
+  -->
+  <floox-nav>
+    <div class="floox">
+      <floox-icon></floox-icon>
+      <p class="floox">Floox</p>
+    </div>
+    <floox-menu>
+      <floox-button>About</floox-button>
+      <floox-button>Downloads</floox-button>
+      <floox-button>Documentation</floox-button>
+    </floox-menu>
+    <div>
+      <a href="login">
+        <floox-button border>Log in</floox-button>
+      </a>
+      <a href="signup" id="signup">
+        <floox-button raised>Sign up</floox-button>
+      </a>
+
+      <paper-icon-button id="search" src="src/assets/icons/search.svg"></paper-icon-button>
+    </div>
+  </floox-nav>
+
+  <!--
+  Now we need to create the main page content
+  -->
+  <div class="content">
+    <div>
+      <div class="row">
+        <floox-pill>
+          <img src="src/assets/icons/people.svg" alt="people"/>
+          <p>Active Clients</p>
+        </floox-pill>
+        <floox-pill>
+          <p>123</p>
+        </floox-pill>
+      </div>
+      <div class="row">
+        <floox-pill>
+          <img src="src/assets/icons/money.svg" alt="people"/>
+          <p>Total Profit Generated</p>
+        </floox-pill>
+        <floox-pill>
+          <img src="src/assets/icons/money.svg" alt="people"/>
+          <p>123.00</p>
+        </floox-pill>
+      </div>
+      <div class="row">
+        <floox-pill>
+          <img src="src/assets/icons/upload.svg" alt="people"/>
+          <p>123 Positions Won</p>
+        </floox-pill>
+      </div>
+      <div class="row">
+        <floox-pill>
+          <img src="src/assets/icons/download.svg" alt="people"/>
+          <p>123 Positions Lost</p>
+        </floox-pill>
+      </div>
+
+      <!--
+      We place some code here to say that the application is still in beta
+      -->
+      <div class="row">
+        <p>We are still in development, please follow up on our release notes to get an idea of what we are busy with.</p>
+      </div>
+      <div class="row">
+        <paper-icon-button src="src/assets/icons/github.svg"></paper-icon-button>
+      </div>
+    </div>
+    <div>
+      <p>AI Based Algorithmic Trading on <strong>MetaTrader</strong></p>
+      <p>Take your trading to the next level on <strong>Floox</strong></p>
+      <p>
+        We offer state of the art learning algorithms and design adaptive algorithms that aim to maximize
+        the intelligence and profitability on the forex environment.
+      </p>
       <div>
-        <p><tkt-h intro outro>Home</tkt-h></p>
-        <p><tkt-h intro outro>About</tkt-h></p>
-        <p><tkt-h intro outro>Contact</tkt-h></p>
-        <p><tkt-h intro outro>Help</tkt-h></p>
+        <floox-button raised>Learn more</floox-button>
       </div>
     </div>
   </div>
-</div>
-<div class="container-page">
-  <div class="page">
-    <div class="content">
+
+  <div class="started">
+    <p class="title">Get Started with <strong>Floox</strong></p>
+    <p class="description">Since we're still in beta, for now we only accept sign up using your standard email address. We also accept Google or Facebook. However, in the future, we look to allowing our clients to get started with their direct broker account.</p>
+    <div class="emails">
       <div>
-        <div class="slogan">
-          <tkt-h intro="true" outro>Get Your</tkt-h>
-          <tkt-h intro="true" outro>Ticket Now!</tkt-h>
-        </div>
-        <div class="text">
-          <p><tkt-p intro="true" fade="true">Want to book a movie at a cinema near you, or maybe buy an event ticket</tkt-p></p>
-          <p><tkt-p fade="true" intro="true">you'd like to go to (MTN Bush Fire 😬). Use our ticket booth and pay for</tkt-p></p>
-          <p><tkt-p fade="true" intro="true">you ticket via mobile money.</tkt-p></p>
-        </div>
-        <div class="tickets">
-          <tkt-ticket url="manifest/wonder-low.jpg" background="#FFB50C" color="#FFFFFF" intro>movies</tkt-ticket>
-          <tkt-ticket url="manifest/tomorrow.jpg" background="#FFB50C" color="#FFFFFF" intro>events</tkt-ticket>
-          <tkt-ticket url="manifest/messi.jpg" background="#FFB50C" color="#FFFFFF" intro>sports</tkt-ticket>
-        </div>
-        <div class="section">
-          <div>
-            <p>categories</p>
-          </div>
-          <div>
-            <p>featured</p>
-          </div>
-          <div>
-            <p>upcoming</p>
-          </div>
-          <hr/>
+        <img src="src/assets/icons/google.svg" alt="google">
+        <p>Google</p>
+      </div>
+      <div>
+        <img src="src/assets/icons/facebook.svg" alt="facebook">
+        <p>Facebook</p>
+      </div>
+    </div>
+    <p class="description">Setting your account up to use Floox assistance is really easy. All you have to do are these 3 items below and you're all set.</p>
+    <div class="steps">
+      <div>
+        <p>Step 1</p>
+        <div>
+          <p>Sign Up</p>
+          <p>Sign up and verify you email address</p>
+          <paper-ripple></paper-ripple>
         </div>
       </div>
       <div>
-        <tkt-blob-image id="home-image" intro="true" url="manifest/wonder-low.jpg"></tkt-blob-image>
-        <div class="feature" id="feature">
-          <tkt-h intro outro>Wonder Woman (2018)</tkt-h>
-          <tkt-p intro fade>Action Fantasy | 2 h 14 min | USA</tkt-p>
+        <p>Step 2</p>
+        <div>
+          <p>Download EA</p>
+          <p>Download the Floox Expert Advisor.</p>
+          <paper-ripple></paper-ripple>
+        </div>
+      </div>
+      <div>
+        <p>Step 3</p>
+        <div>
+          <p>Authenticate EA</p>
+          <p>Launch your EA with your username.</p>
+          <paper-ripple></paper-ripple>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="container-page">
-  <div class="page">
-    <tkt-back-image url="./manifest/events.jpg" color="#FFB50C" text="E"></tkt-back-image>
+
+  <div class="github">
+    <div>
+      <div>
+        <p>🤓 <strong>Floox</strong> Beta team </p>
+        <div></div>
+        <p>Join today</p>
+      </div>
+      <p>We need all the help we can get!</p>
+      <p>It's quite the sweat for our <strong>Dev</strong> team to get new features together, and we need extra hands to test out the new stuff we want to offer to everyone.</p>
+      <p>If you want to help us out, fill in your email in the form below, and we will add you our <strong>Floox</strong> Beta team. Who knows, there might be something for your efforts in the end 😉.</p>
+
+      <form>
+        <floox-input raised name="email" label="Email Address"></floox-input>
+        <floox-button raised>Join</floox-button>
+      </form>
+    </div>
+    <div>
+      <div>
+        <img src="src/assets/icons/github.svg" alt="github"/>
+        <p>Releases &amp; Commits</p>
+      </div>
+      <div>
+        <p>2<sup>nd</sup> May 2021</p>
+        <div>
+          <p>Improved our core intelligence, will be running tests in the near future with beta team</p>
+        </div>
+      </div>
+      <div>
+        <p>2<sup>nd</sup> May 2021</p>
+        <div>
+          <p>Adding new sign up options with Google and Facebook. Will be opening conversations with brokers to allow direct account linking.</p>
+        </div>
+      </div>
+      <floox-button>view more activity</floox-button>
+    </div>
   </div>
-</div>
-<div class="container-page">
-  <div class="page">
-    <tkt-back-image url="./manifest/wonder-low.jpg" color="#FFB50C"></tkt-back-image>
+
+  <div class="footer">
+    <div>
+      <div>
+        <floox-button>About</floox-button>
+        <floox-button>Downloads</floox-button>
+        <floox-button>Documentation</floox-button>
+      </div>
+      <div>
+        <p>Any suggestions that you think could really help improve the Floox platform? Send us an email with your entailments, or you could otherwise give us a rating 😬.</p>
+        <p>info@floox.co.za</p>
+        <div>
+          <floox-rating></floox-rating>
+          <floox-button border>
+            <img src="src/assets/icons/send.svg" alt="send">
+            <p>Send</p>
+          </floox-button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <floox-icon flat></floox-icon>
+        <p>Floox</p>
+      </div>
+      <p>&copy; Copyrights 2021</p>
+    </div>
   </div>
-</div>
-<script src="index.js" type="text/javascript"></script>
 </body>
 </html>

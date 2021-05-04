@@ -5,15 +5,18 @@
   "author": "The Ticketer Project Authors",
   "license": "",
   "dependencies": {
-    "@polymer/paper-checkbox": "latest",
+    "@polymer/decorators": "^3.0.0",
+    "@polymer/iron-icon": "^3.0.1",
+    "@polymer/iron-icons": "^3.0.1",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-checkbox": "^3.1.0",
+    "@polymer/paper-icon-button": "^3.0.2",
+    "@polymer/paper-input": "^3.2.1",
+    "@polymer/paper-ripple": "^3.0.2",
     "@polymer/polymer": "latest",
-    "@webcomponents/webcomponentsjs": "latest",
-    "animejs": "^3.1.0",
-    "d3": "^5.9.7",
-    "trial-js": "^0.1.1",
-    "underscore": "^1.9.1"
+    "@webcomponents/webcomponentsjs": "latest"
   },
   "scripts": {
-    "serve": "polymer serve"
+    "start": "polymer serve"
   }
 }

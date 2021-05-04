@@ -1,3 +1,5 @@
 /node_modules/
 .gitignore
 .idea/workspace.xml
+style.css
+style.css.map

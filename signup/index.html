@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floox | Sign Up</title>
+
+    <link href="../style.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module" src="../node_modules/@polymer/paper-icon-button/paper-icon-button.js"></script>
+    <script type="module" src="../node_modules/@polymer/iron-icons/iron-icons.js"></script>
+    <script type="module" src="../node_modules/@polymer/paper-checkbox/paper-checkbox.js"></script>
+
+    <script src="../src/components/button.js" type="module"></script>
+    <script src="../src/components/navigation.js" type="module"></script>
+    <script src="../src/components/menu.js" type="module"></script>
+    <script src="../src/components/floox.js" type="module"></script>
+    <script src="../src/components/rating.js" type="module"></script>
+    <script src="../src/components/input.js" type="module"></script>
+</head>
+<body>
+    <img class="background" src="../src/assets/images/background.svg" alt="background"/>
+
+    <floox-nav>
+        <div class="floox">
+            <floox-icon href="../"></floox-icon>
+            <p class="floox">Floox</p>
+        </div>
+        <floox-menu>
+            <floox-button>About</floox-button>
+            <floox-button>Downloads</floox-button>
+            <floox-button>Documentation</floox-button>
+        </floox-menu>
+        <div>
+            <a href="../login">
+                <floox-button border>Log in</floox-button>
+            </a>
+
+            <paper-icon-button id="search" src="../src/assets/icons/search.svg"></paper-icon-button>
+        </div>
+    </floox-nav>
+
+    <form class="signup">
+        <p>Create <strong>Floox</strong> Account</p>
+        <p>Enter a valid email address, and password</p>
+
+        <floox-input label="Email Address" type="email" name="email" raised></floox-input>
+        <floox-input label="Password" type="password" name="password" raised></floox-input>
+        <floox-input label="Confirm Password" type="password" name="confirm" raised></floox-input>
+
+        <p>Please remember to read through our terms of use and application policies to make sure you are comfortable with everything.</p>
+
+        <div>
+            <floox-button raised>Sign Up</floox-button>
+            <div>
+                <paper-icon-button src="../src/assets/icons/google.svg"></paper-icon-button>
+                <paper-icon-button src="../src/assets/icons/facebook.svg"></paper-icon-button>
+            </div>
+
+            <paper-checkbox name="policy">policy agreement</paper-checkbox>
+        </div>
+    </form>
+
+    <div class="footer">
+        <div>
+            <div>
+                <floox-button>About</floox-button>
+                <floox-button>Downloads</floox-button>
+                <floox-button>Documentation</floox-button>
+            </div>
+            <div>
+                <p>Any suggestions that you think could really help improve the Floox platform? Send us an email with your entailments, or you could otherwise give us a rating 😬.</p>
+                <p>info@floox.co.za</p>
+                <div>
+                    <floox-rating></floox-rating>
+                    <floox-button border>
+                        <img src="../src/assets/icons/send.svg" alt="send">
+                        <p>Send</p>
+                    </floox-button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <floox-icon flat></floox-icon>
+                <p>Floox</p>
+            </div>
+            <p>&copy; Copyrights 2021</p>
+        </div>
+    </div>
+</body>
+</html>

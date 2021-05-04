@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="SVGID" width="1920" height="1080" transform="translate(0.469)" fill="none"/>
+    </clipPath>
+    <filter id="Rectangle_7" x="-188.615" y="-1046.001" width="2249.619" height="2024.597" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="22.5" result="blur"/>
+      <feFlood flood-opacity="0.031"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="background" transform="translate(-0.469)">
+    <g id="Group_12" data-name="Group 12" clip-path="url(#clip-path)">
+      <g transform="matrix(1, 0, 0, 1, 0.47, 0)" filter="url(#Rectangle_7)">
+        <g id="Rectangle_7-2" data-name="Rectangle 7" transform="matrix(0.85, 0.52, -0.52, 0.85, 461.47, -978.5)" fill="#f2f9ff" stroke="#f4fcff" stroke-miterlimit="10" stroke-width="1">
+          <rect width="1794.501" height="1118.844" rx="134.936" stroke="none"/>
+          <rect x="0.5" y="0.5" width="1793.501" height="1117.844" rx="134.436" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
