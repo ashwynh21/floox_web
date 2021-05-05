@@ -13,8 +13,11 @@
     "@polymer/paper-icon-button": "^3.0.2",
     "@polymer/paper-input": "^3.2.1",
     "@polymer/paper-ripple": "^3.0.2",
+    "@polymer/paper-spinner": "^3.0.2",
     "@polymer/polymer": "latest",
-    "@webcomponents/webcomponentsjs": "latest"
+    "@webcomponents/webcomponentsjs": "latest",
+    "animejs": "^3.2.1",
+    "socket.io-client": "^4.0.1"
   },
   "scripts": {
     "start": "polymer serve"

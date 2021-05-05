@@ -13,6 +13,7 @@
   <script type="module" src="./node_modules/@polymer/iron-icons/iron-icons.js"></script>
   <script type="module" src="./node_modules/@polymer/paper-button/paper-button.js"></script>
   <script type="module" src="./node_modules/@polymer/paper-ripple/paper-ripple.js"></script>
+  <script type="module" src="./node_modules/@polymer/paper-spinner/paper-spinner.js"></script>
 
   <script src="src/components/button.js" type="module"></script>
   <script src="src/components/navigation.js" type="module"></script>
@@ -63,7 +64,7 @@
           <p>Active Clients</p>
         </floox-pill>
         <floox-pill>
-          <p>123</p>
+          <p id="active_clients"><paper-spinner></paper-spinner></p>
         </floox-pill>
       </div>
       <div class="row">
@@ -218,5 +219,9 @@
       <p>&copy; Copyrights 2021</p>
     </div>
   </div>
+
+  <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+  <script src="node_modules/animejs/lib/anime.min.js"></script>
+  <script src="src/javascript/general.js" type="module"></script>
 </body>
 </html>

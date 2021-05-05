@@ -129,9 +129,12 @@ body {
       > floox-pill:nth-child(2) {
         font-family: "Segoe UI", sans-serif;
         width: min-content;
-        letter-spacing: 8px;
         > p {
+          letter-spacing: 8px;
           text-align: center;
+          font-size: 14pt;
+          font-weight: bolder;
+          text-indent: 8px;
         }
       }
     }
