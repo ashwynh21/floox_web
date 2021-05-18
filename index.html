@@ -178,8 +178,15 @@
       <form>
         <floox-input raised name="email" label="Email Address">
         </floox-input>
-        <floox-button raised>Join</floox-button>
+        <floox-button raised id="beta">
+          <p>Join</p>
+          <paper-spinner active style="display: none;">
+          </paper-spinner>
+        </floox-button>
+        <p>0/10</p>
       </form>
+      <p id="message">
+      </p>
     </div>
     <div id="github">
       <div>
@@ -233,5 +240,7 @@
   <script src="src/javascript/general.js"></script>
   <script src="src/javascript/github.js"></script>
   <script src="src/javascript/rating.js"></script>
+  <script src="src/javascript/beta.js"></script>
+
 </body>
 </html>

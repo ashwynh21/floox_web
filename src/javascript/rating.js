@@ -20,8 +20,15 @@ function rate(value) {
             return response.json();
         })
 }
+function setup() {
+    /*
+    * Here we want to setup the current state of the beta testers to show users how many testers have signed up
+    * */
+
+}
 
 ((stars, button) => {
+
     /*
     * so here we configure the event listener for the provided button so that we can call the rate function
     * to send the data to our API.
