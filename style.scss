@@ -314,11 +314,11 @@ paper-spinner {
       }
     }
     > p:nth-child(2), > p:nth-child(3), > p:nth-child(4) {
-      font-size: 13pt;
+      font-size: 12pt;
       color: #26464E;
       font-family: Calibri, sans-serif;
       font-weight: lighter;
-      line-height: 36px;
+      line-height: 32px;
 
       > strong {
         color: #7EC6FF;
@@ -330,6 +330,7 @@ paper-spinner {
       justify-content: start;
       align-items: center;
       gap: 24px;
+      margin-top: 16px;
 
       > floox-button {
         --fill: #26464E;
@@ -369,27 +370,51 @@ paper-spinner {
       flex-flow: column;
       align-items: start;
       justify-content: center;
+      width: 100%;
 
-      > p {
+      > span {
         font-family: Calibri, sans-serif;
         font-weight: lighter;
         color: #164751;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        width: 100%;
+        > div {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          > img {
+            height: 32px;
+            max-width: 32px;
+            border-radius: 4px;
+
+            box-shadow: 0 0 4px 1px #0001;
+          }
+        }
+        > p {
+           margin: 0;
+        }
       }
       > div {
         background: white;
         border-radius: 12px;
         box-shadow: 0 0 4px 1px #0001;
-        padding: 12px;
+        width: 100%;
+        position: relative;
 
         > p {
           font-family: Calibri, sans-serif;
           color: #164751;
           font-weight: lighter;
           line-height: 24px;
+          margin: 24px;
         }
       }
     }
-    > floox-button {
+    > a > floox-button {
       font-family: Calibri, sans-serif;
       font-weight: lighter;
       font-size: 12pt;
