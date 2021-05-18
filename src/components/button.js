@@ -1,6 +1,7 @@
 import { PolymerElement, html } from "@polymer/polymer/polymer-element";
 
 import '@polymer/paper-button';
+import '@polymer/paper-spinner/paper-spinner';
 
 class Button extends PolymerElement {
     static get properties() {
@@ -37,7 +38,7 @@ class Button extends PolymerElement {
                 paper-button:hover {
                     transform: scale(1.05)
                 }
-                p {
+                #text {
                     color: var(--color, black);
                     text-align: var(--align, center);
                     display: flex;
@@ -48,7 +49,7 @@ class Button extends PolymerElement {
             
             <div id="container">
                 <paper-button id="button">
-                    <p id="text"><slot/></p>
+                    <div id="text"><slot/></div>
                 </paper-button>
             </div>
         `;

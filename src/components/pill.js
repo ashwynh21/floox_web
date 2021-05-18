@@ -16,9 +16,10 @@ class Pill extends PolymerElement {
                     background: var(--fill, white);
                     justify-content: center;
                 }
-                ::slotted > p {
+                ::slotted > * {
                     text-align: center;
                     flex: 1;
+                    position: relative;
                 }
             </style>
             <paper-button>

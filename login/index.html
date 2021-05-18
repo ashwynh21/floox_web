@@ -13,6 +13,7 @@
     <script type="module" src="../node_modules/@polymer/paper-icon-button/paper-icon-button.js"></script>
     <script type="module" src="../node_modules/@polymer/iron-icons/iron-icons.js"></script>
     <script type="module" src="../node_modules/@polymer/paper-checkbox/paper-checkbox.js"></script>
+    <script type="module" src="../node_modules/@polymer/paper-spinner/paper-spinner.js"></script>
 
     <script src="../src/components/button.js" type="module"></script>
     <script src="../src/components/navigation.js" type="module"></script>
@@ -20,6 +21,29 @@
     <script src="../src/components/rating.js" type="module"></script>
     <script src="../src/components/input.js" type="module"></script>
     <script src="../src/components/floox.js" type="module"></script>
+
+    <script src="https://apis.google.com/js/platform.js" type="text/javascript"></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '478448533393096',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v10.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function(d, s, id){
+            let js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </head>
 <body>
     <img class="background" src="../src/assets/images/background.svg" alt="background"/>
@@ -45,14 +69,22 @@
     <form class="signup">
         <p>Log into <strong>Floox</strong></p>
         <p>Enter a valid email address, and password</p>
-        <floox-input label="Email Address" type="email" name="email" raised></floox-input>
+        <floox-input label="Email Address" type="email" name="username" raised></floox-input>
         <floox-input label="Password" type="password" name="password" raised></floox-input>
-        <div>
-            <floox-button raised>Sign Up</floox-button>
+        <div class="controls">
+            <floox-button raised id="login">
+                <div>Log In</div>
+                <paper-spinner active></paper-spinner>
+            </floox-button>
             <div>
-                <paper-icon-button src="../src/assets/icons/google.svg"></paper-icon-button>
-                <paper-icon-button src="../src/assets/icons/facebook.svg"></paper-icon-button>
+                <paper-icon-button id="google" src="../src/assets/icons/google.svg"></paper-icon-button>
+                <paper-icon-button id="facebook" src="../src/assets/icons/facebook.svg"></paper-icon-button>
             </div>
+            <a href="./recover">
+                <floox-button>forgot password?</floox-button>
+            </a>
+        </div>
+        <div id="message">
         </div>
     </form>
 
@@ -83,5 +115,8 @@
             <p>&copy; Copyrights 2021</p>
         </div>
     </div>
+
+    <script src="../src/javascript/environment.js"></script>
+    <script src="../src/javascript/login.js"></script>
 </body>
 </html>

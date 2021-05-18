@@ -33,7 +33,8 @@
   -->
   <floox-nav>
     <div class="floox">
-      <floox-icon></floox-icon>
+      <floox-icon>
+      </floox-icon>
       <p class="floox">Floox</p>
     </div>
     <floox-menu>
@@ -49,7 +50,8 @@
         <floox-button raised>Sign up</floox-button>
       </a>
 
-      <paper-icon-button id="search" src="src/assets/icons/search.svg"></paper-icon-button>
+      <paper-icon-button id="search" src="src/assets/icons/search.svg">
+      </paper-icon-button>
     </div>
   </floox-nav>
 
@@ -64,7 +66,10 @@
           <p>Active Clients</p>
         </floox-pill>
         <floox-pill>
-          <p id="active_clients"><paper-spinner></paper-spinner></p>
+          <div id="active_clients">
+            <paper-spinner active>
+            </paper-spinner>
+          </div>
         </floox-pill>
       </div>
       <div class="row">
@@ -97,7 +102,8 @@
         <p>We are still in development, please follow up on our release notes to get an idea of what we are busy with.</p>
       </div>
       <div class="row">
-        <paper-icon-button src="src/assets/icons/github.svg"></paper-icon-button>
+        <paper-icon-button src="src/assets/icons/github.svg">
+        </paper-icon-button>
       </div>
     </div>
     <div>
@@ -133,7 +139,8 @@
         <div>
           <p>Sign Up</p>
           <p>Sign up and verify you email address</p>
-          <paper-ripple></paper-ripple>
+          <paper-ripple>
+          </paper-ripple>
         </div>
       </div>
       <div>
@@ -141,7 +148,8 @@
         <div>
           <p>Download EA</p>
           <p>Download the Floox Expert Advisor.</p>
-          <paper-ripple></paper-ripple>
+          <paper-ripple>
+          </paper-ripple>
         </div>
       </div>
       <div>
@@ -149,7 +157,8 @@
         <div>
           <p>Authenticate EA</p>
           <p>Launch your EA with your username.</p>
-          <paper-ripple></paper-ripple>
+          <paper-ripple>
+          </paper-ripple>
         </div>
       </div>
     </div>
@@ -167,7 +176,8 @@
       <p>If you want to help us out, fill in your email in the form below, and we will add you our <strong>Floox</strong> Beta team. Who knows, there might be something for your efforts in the end 😉.</p>
 
       <form>
-        <floox-input raised name="email" label="Email Address"></floox-input>
+        <floox-input raised name="email" label="Email Address">
+        </floox-input>
         <floox-button raised>Join</floox-button>
       </form>
     </div>
@@ -203,7 +213,8 @@
         <p>Any suggestions that you think could really help improve the Floox platform? Send us an email with your entailments, or you could otherwise give us a rating 😬.</p>
         <p>info@floox.co.za</p>
         <div>
-          <floox-rating></floox-rating>
+          <floox-rating>
+          </floox-rating>
           <floox-button border>
             <img src="src/assets/icons/send.svg" alt="send">
             <p>Send</p>
@@ -213,7 +224,8 @@
     </div>
     <div>
       <div>
-        <floox-icon flat></floox-icon>
+        <floox-icon flat>
+        </floox-icon>
         <p>Floox</p>
       </div>
       <p>&copy; Copyrights 2021</p>

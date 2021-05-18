@@ -1,4 +1,7 @@
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .signup {
   display: flex;
   flex-flow: column;
@@ -48,7 +51,21 @@
 
     --fill: #5187B7;
     --color: white;
+    > floox-button {
+      min-width: 80px;
+      > paper-spinner {
+        --paper-spinner-layer-1-color: white;
+        --paper-spinner-layer-2-color: white;
+        --paper-spinner-layer-3-color: white;
+        --paper-spinner-layer-4-color: white;
+        --paper-spinner-stroke-width: 3px;
 
+        width: 20px;
+        height: 20px;
+
+        display: none;
+      }
+    }
     > paper-checkbox {
       --paper-checkbox-checked-color: #5187B7;
       --paper-checkbox-label-color: #7EC6FF;
@@ -63,5 +80,16 @@
       align-items: center;
       gap: 12px;
     }
+  }
+  > *:last-child {
+    display: flex;
+    justify-content: center;
+
+    color: #800;
+    font-weight: lighter;
+    margin: 0;
+    min-height: 20px;
+    font-size: 11pt;
+    line-height: 27px;
   }
 }

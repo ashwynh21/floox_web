@@ -1,8 +1,8 @@
 {
-  "name": "ticketer",
+  "name": "floox_web",
   "version": "1.0.0",
   "main": "index.html",
-  "author": "The Ticketer Project Authors",
+  "author": "",
   "license": "",
   "dependencies": {
     "@polymer/decorators": "^3.0.0",

@@ -21,6 +21,12 @@ class Input extends PolymerElement {
                 type: String,
                 value: '',
             },
+            valid: {
+                type: Boolean,
+                value: true,
+                reflectToAttribute: true,
+                observer: 'validate',
+            },
             tabindex: {
                 type: Number,
                 value: 0,
@@ -43,11 +49,6 @@ class Input extends PolymerElement {
                     cursor: pointer;
                     margin: inherit;
                     position: relative;
-                }
-                :host([valid]) p {
-                    transform: translate(8px, -24px) scale(0.9);
-                    transition: transform 0.5s;
-                    color: var(--color, black);
                 }
                 :host > div {
                     display: flex;
@@ -113,9 +114,8 @@ class Input extends PolymerElement {
     }
 
     valueChange() {
-        this.valid = this.value.length > 0;
 
-        if (this.valid) {
+        if (this.value.length > 0) {
             this.$.container
                 .querySelector('#ashlabel')
                 .setAttribute('style', `transform: translate(8px, -24px) scale(0.9)`);
@@ -124,8 +124,12 @@ class Input extends PolymerElement {
                 .querySelector('#ashlabel')
                 .setAttribute('style', ``);
         }
+    }
 
-        return this.valid;
+    validate(value) {
+        if(!value) {
+            this.$.container.setAttribute('style', 'box-shadow: 0 0 4px 1px #8002;');
+        }
     }
 }
 
