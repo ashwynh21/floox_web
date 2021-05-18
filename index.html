@@ -204,11 +204,15 @@
         <p>Any suggestions that you think could really help improve the Floox platform? Send us an email with your entailments, or you could otherwise give us a rating 😬.</p>
         <p>info@floox.co.za</p>
         <div>
-          <floox-rating>
+          <floox-rating value="10">
           </floox-rating>
-          <floox-button border>
-            <img src="src/assets/icons/send.svg" alt="send">
-            <p>Send</p>
+          <floox-button border id="rating">
+            <div>
+              <img src="src/assets/icons/send.svg" alt="send">
+              <p>Send</p>
+            </div>
+            <paper-spinner active style="display: none">
+            </paper-spinner>
           </floox-button>
         </div>
       </div>
@@ -228,5 +232,6 @@
   <script src="src/javascript/environment.js"></script>
   <script src="src/javascript/general.js"></script>
   <script src="src/javascript/github.js"></script>
+  <script src="src/javascript/rating.js"></script>
 </body>
 </html>
