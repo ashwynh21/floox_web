@@ -181,6 +181,7 @@ async function facebook() {
         login(form, button)
             .then(user => {
                 console.log(user);
+                window.location = '../dashboard';
             })
             .catch(error => {
                 console.error(error);
