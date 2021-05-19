@@ -67,6 +67,7 @@ paper-spinner {
   justify-content: center;
   width: 80%;
   margin-top: 80px;
+  flex-wrap: wrap;
 
   > div {
     flex: 1;
@@ -78,6 +79,7 @@ paper-spinner {
   }
   > div:nth-child(2) {
     text-align: left;
+    min-width: 320px;
 
     > p, > div {
       width: 70%;
@@ -239,6 +241,7 @@ paper-spinner {
     align-items: center;
     justify-content: center;
     gap: 64px;
+    flex-wrap: wrap;
 
     > div {
       > p {
@@ -274,8 +277,9 @@ paper-spinner {
   justify-content: center;
   align-items: center;
   margin-top: 128px;
-  width: 70%;
-  gap: 64px;
+  width: 80%;
+  gap: 10%;
+  flex-wrap: wrap;
 
   > div {
     display: flex;
@@ -285,6 +289,7 @@ paper-spinner {
     flex: 1;
   }
   > div:first-child {
+    min-width: 320px;
     > div:first-child {
       display: flex;
       justify-content: start;
@@ -378,6 +383,7 @@ paper-spinner {
     display: flex;
     flex-flow: column;
     gap: 24px;
+    min-width: 320px;
 
     > div:first-child {
       display: flex;
@@ -444,6 +450,10 @@ paper-spinner {
         }
       }
     }
+
+    > a {
+      text-decoration: none;
+    }
     > a > floox-button {
       font-family: Calibri, sans-serif;
       font-weight: lighter;
@@ -469,12 +479,15 @@ paper-spinner {
   > div {
     margin: 48px;
     display: flex;
+    flex-wrap: wrap;
 
     > div {
       flex: 1;
     }
   }
   > div:first-child > div:last-child {
+    margin-left: 44px;
+    margin-top: 32px;
     > * {
       width: 70%;
     }
@@ -584,6 +597,11 @@ paper-spinner {
 }
 
 floox-menu {
+  @media screen and (max-width: 1080px) {
+    & {
+      display: none;
+    }
+  }
   > floox-button {
     --fill: transparent;
     --color: #6F8698;
@@ -592,9 +610,12 @@ floox-menu {
 }
 floox-nav {
   > div {
+    > a {
+      text-decoration: none;
+    }
     > a:nth-child(1) > floox-button {
-      min-width: 88px;
       --color: #7EC5FF;
+      min-width: 88px;
     }
     > a:nth-child(2) > floox-button {
       --fill: #FF41A3;

@@ -9,11 +9,15 @@ class Navigation extends PolymerElement {
                 display: flex;
                 padding: 24px 0;
                 
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
-                gap: 128px;
+                gap: 10%;
             }
             ::slotted(div) { display: flex; align-items: center }
+            
+            ::slotted(div > a) {
+                text-decoration: none;
+            }
         </style>
         
         <slot/>
