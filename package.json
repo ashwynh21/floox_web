@@ -21,6 +21,7 @@
     "socket.io-client": "^4.0.1"
   },
   "scripts": {
+    "prestart": "sudo kill -9 `sudo lsof -t -i:80`",
     "start": "polymer serve --port 80 --hostname 0.0.0.0"
   }
 }
