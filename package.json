@@ -21,6 +21,6 @@
     "socket.io-client": "^4.0.1"
   },
   "scripts": {
-    "start": "polymer serve --port 80"
+    "start": "polymer serve --port 80 --hostname 0.0.0.0"
   }
 }
