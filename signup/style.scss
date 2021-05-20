@@ -10,7 +10,8 @@ a {
   gap: 24px;
 
   min-width: 320px;
-  width: 24%;
+  max-width: 420px;
+  width: 80%;
 
   > * { width: 100%; }
   > p:first-child {
@@ -45,9 +46,10 @@ a {
   > div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 128%;
-    margin-top: 32px;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 32px;
 
     --fill: #5187B7;
     --color: white;

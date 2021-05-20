@@ -5,12 +5,8 @@
 
 .signup > div {
   width: 100%;
-  justify-content: space-between;
 }
 
-.controls {
-  justify-content: space-between !important;
-}
 .controls > a > floox-button:last-child {
   --color: #5187B7;
   --fill: transparent;

@@ -44,10 +44,6 @@ paper-spinner {
   transform: scale(1.05);
 }
 
-#signup {
-  margin-left: 12px;
-}
-
 .background {
   position: absolute;
   width: 100%;
@@ -64,8 +60,8 @@ paper-spinner {
   display: flex;
   align-items: start;
   justify-content: center;
-  width: 80%;
-  margin-top: 80px;
+  width: 100%;
+  margin-top: 64px;
   flex-wrap: wrap;
 }
 .content > div {
@@ -74,13 +70,14 @@ paper-spinner {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 600px;
 }
 .content > div:nth-child(2) {
   text-align: left;
   min-width: 320px;
 }
 .content > div:nth-child(2) > p, .content > div:nth-child(2) > div {
-  width: 70%;
+  width: 80%;
 }
 .content > div:nth-child(2) > p:first-child {
   font-size: 22pt;
@@ -123,6 +120,8 @@ paper-spinner {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 .content > div:nth-child(1) .row > floox-pill {
   color: #7EC6FF;
@@ -173,7 +172,8 @@ paper-spinner {
   flex-flow: column;
   gap: 12px;
   align-items: center;
-  margin-top: 128px;
+  margin-top: 96px;
+  width: 90%;
 }
 .started > .title {
   font-family: Calibri, sans-serif;
@@ -219,7 +219,8 @@ paper-spinner {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 64px;
+  width: 80%;
+  gap: 4vw 64px;
   flex-wrap: wrap;
 }
 .started > .steps > div > p {
@@ -251,9 +252,9 @@ paper-spinner {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 128px;
+  margin-top: 96px;
   width: 80%;
-  gap: 10%;
+  gap: 8vw;
   flex-wrap: wrap;
 }
 .github > div {
@@ -307,7 +308,8 @@ paper-spinner {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 8px 24px;
 }
 .github > div:first-child > form > floox-button {
   --fill: #26464E;
@@ -338,7 +340,6 @@ paper-spinner {
 }
 .github > div:first-child > form > p {
   font-weight: lighter;
-  margin-left: 48px;
 }
 .github > div:first-child > #message {
   font-weight: lighter;
@@ -426,30 +427,34 @@ paper-spinner {
 }
 
 .footer {
-  margin-top: 128px;
-  min-height: 320px;
+  margin-top: 96px;
   background: #5187B7;
   box-shadow: 0 0 8px 1px #0002;
-  width: 100%;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
 }
 .footer > div {
-  margin: 48px;
   display: flex;
   flex-wrap: wrap;
 }
 .footer > div > div {
   flex: 1;
 }
-.footer > div:first-child > div:last-child {
-  margin-left: 44px;
-  margin-top: 32px;
+.footer > div:first-child {
+  margin: 4%;
+  gap: 4vw;
+  width: 78%;
 }
-.footer > div:first-child > div:last-child > * {
-  width: 70%;
+.footer > div:first-child > div {
+  min-width: 256px;
+}
+.footer > div:last-child {
+  width: 90%;
+  margin-bottom: 12px;
 }
 .footer > div:first-child > div:last-child > p {
   color: white;
@@ -465,6 +470,7 @@ paper-spinner {
   display: flex;
   gap: 32px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .footer > div:first-child > div:last-child div > floox-rating {
   --width: 180px;
@@ -508,7 +514,6 @@ paper-spinner {
   font-weight: bolder;
 }
 .footer > div:first-child > div:first-child {
-  margin-left: 32px;
   display: flex;
   flex-flow: column;
   gap: 12px;
@@ -557,6 +562,11 @@ floox-menu > floox-button {
   min-width: 96px;
 }
 
+floox-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 floox-nav > div > a {
   text-decoration: none;
 }
@@ -568,6 +578,11 @@ floox-nav > div > a:nth-child(2) > floox-button {
   --fill: #FF41A3;
   --color: white;
   --splash: #FFFF;
+}
+@media screen and (max-width: 600px) {
+  floox-nav > .floox > p {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

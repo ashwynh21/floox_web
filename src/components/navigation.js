@@ -13,7 +13,7 @@ class Navigation extends PolymerElement {
                 align-items: center;
                 gap: 10%;
             }
-            ::slotted(div) { display: flex; align-items: center }
+            ::slotted(div) { display: flex; align-items: center; gap: 8px; }
             
             ::slotted(div > a) {
                 text-decoration: none;

@@ -45,9 +45,6 @@ paper-spinner {
     transform: scale(1.05);
   }
 }
-#signup {
-  margin-left: 12px;
-}
 
 .background {
   position: absolute;
@@ -65,8 +62,8 @@ paper-spinner {
   display: flex;
   align-items: start;
   justify-content: center;
-  width: 80%;
-  margin-top: 80px;
+  width: 100%;
+  margin-top: 64px;
   flex-wrap: wrap;
 
   > div {
@@ -75,14 +72,15 @@ paper-spinner {
     flex-direction: column;
 
     justify-content: center;
-    align-items: center
+    align-items: center;
+    max-width: 600px;
   }
   > div:nth-child(2) {
     text-align: left;
     min-width: 320px;
 
     > p, > div {
-      width: 70%;
+      width: 80%;
     }
     > p:first-child {
       font-size: 22pt;
@@ -128,6 +126,8 @@ paper-spinner {
       display: flex;
       justify-content: space-between;
       width: 80%;
+      flex-wrap: wrap;
+      gap: 24px;
 
       > floox-pill {
         color: #7EC6FF;
@@ -191,7 +191,8 @@ paper-spinner {
   flex-flow: column;
   gap: 12px;
   align-items: center;
-  margin-top: 128px;
+  margin-top: 96px;
+  width: 90%;
 
   > .title {
     font-family: Calibri, sans-serif;
@@ -240,7 +241,8 @@ paper-spinner {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 64px;
+    width: 80%;
+    gap: 4vw 64px;
     flex-wrap: wrap;
 
     > div {
@@ -276,9 +278,9 @@ paper-spinner {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 128px;
+  margin-top: 96px;
   width: 80%;
-  gap: 10%;
+  gap: 8vw;
   flex-wrap: wrap;
 
   > div {
@@ -334,8 +336,9 @@ paper-spinner {
       display: flex;
       justify-content: start;
       align-items: center;
+      flex-wrap: wrap;
 
-      gap: 24px;
+      gap: 8px 24px;
 
       > floox-button {
         --fill: #26464E;
@@ -368,7 +371,6 @@ paper-spinner {
 
       > p {
         font-weight: lighter;
-        margin-left: 48px;
       }
     }
     > #message {
@@ -465,19 +467,18 @@ paper-spinner {
   }
 }
 .footer {
-  margin-top: 128px;
-  min-height: 320px;
+  margin-top: 96px;
   background: #5187B7;
   box-shadow: 0 0 8px 1px #0002;
-  width: 100%;
 
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
 
   > div {
-    margin: 48px;
     display: flex;
     flex-wrap: wrap;
 
@@ -485,12 +486,19 @@ paper-spinner {
       flex: 1;
     }
   }
-  > div:first-child > div:last-child {
-    margin-left: 44px;
-    margin-top: 32px;
-    > * {
-      width: 70%;
+  > div:first-child {
+    margin: 4%;
+    gap: 4vw;
+    width: 78%;
+    > div {
+      min-width: 256px;
     }
+  }
+  > div:last-child {
+    width: 90%;
+    margin-bottom: 12px;
+  }
+  > div:first-child > div:last-child {
     > p {
       color: white;
       font-family: Calibri, sans-serif;
@@ -505,6 +513,7 @@ paper-spinner {
       display: flex;
       gap: 32px;
       align-items: center;
+      flex-wrap: wrap;
 
       > floox-rating {
         --width: 180px;
@@ -556,7 +565,6 @@ paper-spinner {
     }
   }
   > div:first-child > div:first-child {
-    margin-left: 32px;
     display: flex;
     flex-flow: column;
     gap: 12px;
@@ -609,6 +617,10 @@ floox-menu {
   }
 }
 floox-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
   > div {
     > a {
       text-decoration: none;
@@ -621,6 +633,14 @@ floox-nav {
       --fill: #FF41A3;
       --color: white;
       --splash: #FFFF;
+    }
+  }
+
+  > .floox {
+    @media screen and (max-width: 600px) {
+      & > p {
+        display: none;
+      }
     }
   }
 }
