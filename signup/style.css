@@ -1,0 +1,92 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.signup {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-width: 320px;
+  width: 24%;
+}
+.signup > * {
+  width: 100%;
+}
+.signup > p:first-child {
+  font-size: 22pt;
+  color: #164751;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+.signup > p:first-child > strong {
+  color: #7EC6FF;
+  font-weight: bolder;
+}
+.signup > p {
+  font-family: "Segoe UI", sans-serif;
+  color: #164751;
+  font-size: 11pt;
+  font-weight: lighter;
+  margin: 0;
+}
+.signup > p > strong {
+  color: #7EC6FF;
+  font-weight: bolder;
+}
+.signup > floox-input {
+  --radius: 24px;
+  --color: #0001;
+}
+.signup > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 128%;
+  margin-top: 32px;
+  --fill: #5187B7;
+  --color: white;
+}
+.signup > div > floox-button {
+  min-width: 80px;
+}
+.signup > div > floox-button > paper-spinner {
+  --paper-spinner-layer-1-color: white;
+  --paper-spinner-layer-2-color: white;
+  --paper-spinner-layer-3-color: white;
+  --paper-spinner-layer-4-color: white;
+  --paper-spinner-stroke-width: 3px;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+.signup > div > paper-checkbox {
+  --paper-checkbox-checked-color: #5187B7;
+  --paper-checkbox-label-color: #7EC6FF;
+  --paper-checkbox-unchecked-color: #5187B7;
+  --paper-checkbox-border-width: 3px;
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  flex-flow: row-reverse;
+}
+.signup > div > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.signup > *:last-child {
+  display: flex;
+  justify-content: center;
+  color: #800;
+  font-weight: lighter;
+  margin: 0;
+  min-height: 20px;
+  font-size: 11pt;
+  line-height: 27px;
+}
+
+/*# sourceMappingURL=style.css.map */
