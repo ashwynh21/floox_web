@@ -3,14 +3,14 @@
   "fragments": [
   ],
   "sources": [
+    "src/**/*",
+    "login/**/*",
+    "signup/**/*",
+    "style.css"
   ],
   "extraDependencies": [
-    "node_modules/@webcomponents/webcomponentsjs/**"
-  ],
-  "builds": [
-    {
-      "preset": "es5-bundled"
-    }
+    "node_modules/@webcomponents/webcomponentsjs/**",
+    "node_modules/@polymer/**"
   ],
   "moduleResolution": "node",
   "npm": true
