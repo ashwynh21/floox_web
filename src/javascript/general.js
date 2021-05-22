@@ -4,7 +4,7 @@
 * */
 
 // we define a constant for the server url.
-const server = 'https://floox.co.za/api/v1.0';
+const server = 'https://www.floox.co.za';
 
 ((client) => {
     /*
