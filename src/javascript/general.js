@@ -4,7 +4,7 @@
 * */
 
 // we define a constant for the server url.
-const server = 'ws://localhost:5000';
+const server = 'https://floox.co.za/api/v1.0';
 
 ((client) => {
     /*
