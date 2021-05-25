@@ -6,7 +6,8 @@
     "src/**/*",
     "login/**/*",
     "signup/**/*",
-    "style.css"
+    "style.css",
+    "floox.ico"
   ],
   "extraDependencies": [
     "node_modules/@webcomponents/webcomponentsjs/**",
