@@ -45,16 +45,24 @@ paper-spinner {
     transform: scale(1.05);
   }
 }
+#active_clients {
+  font-size: 15pt;
+  font-weight: bold;
+}
+#total_profit {
+  font-size: 14pt;
+  letter-spacing: 2px;
+}
 
 .background {
   position: absolute;
   width: 100%;
   z-index: -1;
 
-  &:first-child {
+  &:nth-child(2) {
     top: 0;
   }
-  &:nth-child(2) {
+  &:nth-child(3) {
     top: 80vh;
   }
 }
@@ -121,6 +129,7 @@ paper-spinner {
     display: flex;
     flex-flow: column;
     gap: 24px;
+    position: relative;
 
     .row {
       display: flex;
@@ -643,4 +652,22 @@ floox-nav {
       }
     }
   }
+}
+
+body.loading {
+  overflow-y: hidden;
+}
+
+floox-loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
 }

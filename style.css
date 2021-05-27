@@ -44,15 +44,25 @@ paper-spinner {
   transform: scale(1.05);
 }
 
+#active_clients {
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+#total_profit {
+  font-size: 14pt;
+  letter-spacing: 2px;
+}
+
 .background {
   position: absolute;
   width: 100%;
   z-index: -1;
 }
-.background:first-child {
+.background:nth-child(2) {
   top: 0;
 }
-.background:nth-child(2) {
+.background:nth-child(3) {
   top: 80vh;
 }
 
@@ -115,6 +125,7 @@ paper-spinner {
   display: flex;
   flex-flow: column;
   gap: 24px;
+  position: relative;
 }
 .content > div:nth-child(1) .row {
   display: flex;
@@ -583,6 +594,23 @@ floox-nav > div > a:nth-child(2) > floox-button {
   floox-nav > .floox > p {
     display: none;
   }
+}
+
+body.loading {
+  overflow-y: hidden;
+}
+
+floox-loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -15,18 +15,28 @@
   <script type="module" src="./node_modules/@polymer/paper-button/paper-button.js"></script>
   <script type="module" src="./node_modules/@polymer/paper-ripple/paper-ripple.js"></script>
   <script type="module" src="./node_modules/@polymer/paper-spinner/paper-spinner.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
 
-  <script src="src/components/button.js" type="module"></script>
-  <script src="src/components/navigation.js" type="module"></script>
-  <script src="src/components/menu.js" type="module"></script>
-  <script src="src/components/pill.js" type="module"></script>
-  <script src="src/components/floox.js" type="module"></script>
-  <script src="src/components/input.js" type="module"></script>
-  <script src="src/components/rating.js" type="module"></script>
+  <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+  <script src="src/javascript/environment.js"></script>
+  <script src="src/javascript/socket.js"></script>
+
+  <script src="src/components/loader.js" type="module"></script>
+  <script src="src/components/button.js" type="module" async></script>
+  <script src="src/components/navigation.js" type="module" async></script>
+  <script src="src/components/menu.js" type="module" async></script>
+  <script src="src/components/pill.js" type="module" async></script>
+  <script src="src/components/floox.js" type="module" async></script>
+  <script src="src/components/input.js" type="module" async></script>
+  <script src="src/components/rating.js" type="module" async></script>
+  <script src="src/components/graph.js" type="module" async></script>
 
   <title>Floox | Home</title>
 </head>
-<body>
+<body class="loading">
+  <floox-loader>
+  </floox-loader>
+
   <img class="background" src="src/assets/images/background.svg" alt="background"/>
   <img class="background" src="src/assets/images/panel.svg" alt="background"/>
   <!--
@@ -76,20 +86,28 @@
           <p>Total Profit Generated</p>
         </floox-pill>
         <floox-pill>
-          <img src="src/assets/icons/money.svg" alt="people"/>
-          <p>123.00</p>
+          <p id="total_profit">
+            <paper-spinner active>
+            </paper-spinner>
+          </p>
         </floox-pill>
       </div>
       <div class="row">
         <floox-pill>
           <img src="src/assets/icons/upload.svg" alt="people"/>
-          <p>123 Positions Won</p>
+          <p id="won">
+            <paper-spinner active>
+            </paper-spinner>
+          </p>
         </floox-pill>
       </div>
       <div class="row">
         <floox-pill>
           <img src="src/assets/icons/download.svg" alt="people"/>
-          <p>123 Positions Lost</p>
+          <p id="lost">
+            <paper-spinner active>
+            </paper-spinner>
+          </p>
         </floox-pill>
       </div>
 
@@ -105,6 +123,7 @@
           </paper-icon-button>
         </a>
       </div>
+
     </div>
     <div>
       <p>AI Based Algorithmic Trading on <strong>MetaTrader</strong></p>
@@ -234,9 +253,7 @@
     </div>
   </div>
 
-  <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
   <script src="node_modules/animejs/lib/anime.min.js"></script>
-  <script src="src/javascript/environment.js"></script>
   <script src="src/javascript/general.js"></script>
   <script src="src/javascript/github.js"></script>
   <script src="src/javascript/rating.js"></script>

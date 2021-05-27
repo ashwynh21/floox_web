@@ -11,7 +11,7 @@
   ],
   "extraDependencies": [
     "node_modules/@webcomponents/webcomponentsjs/**",
-    "node_modules/@polymer/**"
+    "node_modules/d3/**"
   ],
   "moduleResolution": "node",
   "npm": true
