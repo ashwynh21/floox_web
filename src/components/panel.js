@@ -57,7 +57,7 @@ class Panel extends PolymerElement {
                 width: 100vw;
                 max-width: 512px;
                 z-index: 2;
-                box-shadow: 0 0 3px 1px #00000008;
+                box-shadow: -2px 0 3px 1px #00000008;
             }
             #button {
                 position: absolute;

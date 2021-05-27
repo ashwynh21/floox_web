@@ -146,9 +146,9 @@ paper-spinner {
 .content > div:nth-child(2) .row > floox-pill > img {
   height: 20px;
 }
-.content > div:nth-child(2) .row:nth-child(1) > floox-pill:nth-child(2) {
+.content > div:nth-child(2) .row:nth-child(2) > floox-pill:nth-child(2) {
   --spacing: 2px;
-  color: #164751;
+  color: #FF419A;
 }
 .content > div:nth-child(2) .row:nth-child(3) > floox-pill, .content > div:nth-child(2) .row:nth-child(4) > floox-pill {
   color: #7EC6FF;
@@ -156,9 +156,9 @@ paper-spinner {
 .content > div:nth-child(2) .row:nth-child(5) > p {
   font-family: "Segoe UI", sans-serif;
   color: #164751;
-  font-size: 11pt;
   font-weight: lighter;
   margin-bottom: 0;
+  font-size: 12pt;
 }
 .content > div:nth-child(2) .row:nth-child(5) > p > strong {
   color: #7EC6FF;
@@ -518,7 +518,10 @@ paper-spinner {
   gap: 12px;
   align-items: flex-start;
 }
-.footer > div:first-child > div:first-child > floox-button {
+.footer > div:first-child > div:first-child > a {
+  text-decoration: none;
+}
+.footer > div:first-child > div:first-child > a > floox-button {
   font-family: Calibri, sans-serif;
   font-weight: lighter;
   font-size: 14pt;
@@ -555,7 +558,10 @@ paper-spinner {
     display: none;
   }
 }
-floox-menu > floox-button {
+floox-menu > a {
+  text-decoration: none;
+}
+floox-menu > a > floox-button {
   --fill: transparent;
   --color: #7EC6FF;
   --splash: #7EC6FF;
@@ -588,7 +594,7 @@ floox-nav > div > a:nth-child(2) > floox-button {
 }
 @media screen and (max-width: 600px) {
   floox-nav > .floox > p {
-    display: none;
+    font-size: 16pt;
   }
 }
 
@@ -608,16 +614,6 @@ floox-panel > div > div:first-child {
   flex-flow: column;
   gap: 12px;
 }
-floox-panel > div > div > floox-button {
-  font-family: Calibri, sans-serif;
-  font-weight: lighter;
-  font-size: 14pt;
-  cursor: pointer;
-  --color: white;
-  --fill: transparent;
-  --align: start;
-  --splash: #FFFD;
-}
 floox-panel > div > div > a {
   text-decoration: none;
 }
@@ -627,6 +623,16 @@ floox-panel > div > div > a:nth-child(1) > floox-button {
 }
 floox-panel > div > div > a:nth-child(2) > floox-button {
   --color: #7EC5FF;
+}
+floox-panel > div > div:last-child > a > floox-button {
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  cursor: pointer;
+  --color: white;
+  --fill: transparent;
+  --align: start;
+  --splash: #FFFD;
 }
 
 body.loading {

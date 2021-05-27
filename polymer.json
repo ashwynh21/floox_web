@@ -6,6 +6,7 @@
     "src/**/*",
     "login/**/*",
     "signup/**/*",
+    "about/**/*",
     "style.css",
     "floox.ico"
   ],
