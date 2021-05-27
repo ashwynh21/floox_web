@@ -23,7 +23,7 @@ class Floox extends PolymerElement {
                     cursor: pointer;
                 }
                 svg line, svg rect {
-                  filter: var(--filter, drop-shadow(0 0 4px #0001));
+                  filter: var(--filter, drop-shadow(0 0 2px #00000008));
                 }
                 svg {
                     height: var(--height, auto);

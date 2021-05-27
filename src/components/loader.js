@@ -16,13 +16,15 @@ class Button extends PolymerElement {
                     border-radius: 50%;
                     background: #7EC6FF;
                     position: absolute;
-                    z-index: -1;
                 }
                 :host {
                   display: flex;
                 
                   align-items: center;
                   justify-content: center;
+                  cursor: pointer;
+                  position: relative;
+                  z-index: 15;
                 }
                 svg {
                   min-width: 100vw;
@@ -32,7 +34,7 @@ class Button extends PolymerElement {
                   left: 1px;
                 }
                 svg > * {
-                  filter: drop-shadow(0px 0px 1px #00000018);
+                  filter: drop-shadow(0px 0px 1px #00000008);
                 }
                 #load {
                     color: #7EC6FF;
@@ -42,7 +44,7 @@ class Button extends PolymerElement {
                     font-weight: bold;
                     font-size: 12pt;
                     letter-spacing: 2px;
-                    text-shadow: 0 2px 4px #0001;
+                    text-shadow: 0 1px 2px #00000008;
                 }
             </style>
             
@@ -86,11 +88,11 @@ class Button extends PolymerElement {
             this.$.load.innerHTML = `loading${(new Array(count + 2)).join('.')}`;
         }, 880);
         window.onload = () => {
-            console.log('done loading');
             setTimeout(() => {
                 this.stopanimation()
                     .then(() => {
                         this.setAttribute('style', 'display: none;');
+                        this.innerHTML = "";
                         document.body.classList = [];
                     });
             }, 3000);

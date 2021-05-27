@@ -26,7 +26,7 @@ class Button extends PolymerElement {
                 paper-button {
                     transition: transform 0.256s;
                     text-transform: none;
-                    border-radius: 44px;
+                    border-radius: 8px;
                     background: var(--fill, white);
                     --paper-button-ink-color: var(--splash, #0006) !important;
                     justify-content: var(--align, center);
@@ -67,7 +67,7 @@ class Button extends PolymerElement {
             s += 'border-width: 1px;';
         }
         if (this.raised) {
-            s += 'box-shadow: 0 1px 4px 1px #0002;';
+            s += 'box-shadow: 0 1px 2px 1px #00000008;';
         }
         this.$.button.setAttribute('style', s);
     }

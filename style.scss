@@ -12,24 +12,25 @@ paper-spinner {
   --paper-spinner-layer-2-color: #7EC6FF;
   --paper-spinner-layer-3-color: #7EC6FF;
   --paper-spinner-layer-4-color: #7EC6FF;
+
+  height: 20px;
+  width: 20px;
+  font-size: 12pt;
 }
 
 .floox {
   color: #7EC6FF;
   font-family: Calibri, sans-serif;
   font-weight: bolder;
-  font-size: 20pt;
-  letter-spacing: 3px;
-  text-shadow: 0 1px 4px #0001;
+  font-size: 18pt;
+  letter-spacing: 2px;
   cursor: pointer;
+  --height: 68px;
 
   display: flex;
   gap: 16px;
 
   transition: transform 0.256s;
-}
-.floox:hover {
-  transform: scale(1.05);
 }
 
 #search {
@@ -58,12 +59,17 @@ paper-spinner {
   position: absolute;
   width: 100%;
   z-index: -1;
+  overflow-x: hidden;
 
   &:nth-child(2) {
     top: 0;
+    min-height: 50vh;
+    justify-content: center;
   }
   &:nth-child(3) {
     top: 80vh;
+    > img {
+    }
   }
 }
 .content {
@@ -73,6 +79,7 @@ paper-spinner {
   width: 100%;
   margin-top: 64px;
   flex-wrap: wrap;
+  gap: 40px;
 
   > div {
     flex: 1;
@@ -82,8 +89,10 @@ paper-spinner {
     justify-content: center;
     align-items: center;
     max-width: 600px;
+    min-width: 360px;
   }
-  > div:nth-child(2) {
+
+  > div:nth-child(1) {
     text-align: left;
     min-width: 320px;
 
@@ -91,6 +100,7 @@ paper-spinner {
       width: 80%;
     }
     > p:first-child {
+      margin-top: 0;
       font-size: 22pt;
       color: #164751;
       line-height: 48px;
@@ -125,11 +135,12 @@ paper-spinner {
     }
   }
 
-  > div:nth-child(1) {
+  > div:nth-child(2) {
     display: flex;
     flex-flow: column;
     gap: 24px;
     position: relative;
+    margin-top: 24px;
 
     .row {
       display: flex;
@@ -139,45 +150,23 @@ paper-spinner {
       gap: 24px;
 
       > floox-pill {
-        color: #7EC6FF;
-        > img {
-          width: 24px;
-        }
-      }
-      > floox-pill:nth-child(2) {
-        font-family: "Segoe UI", sans-serif;
-        width: min-content;
-        > p {
-          letter-spacing: 8px;
-          text-align: center;
-          font-size: 14pt;
-          font-weight: bolder;
-          text-indent: 8px;
-        }
-      }
-    }
-    .row:nth-child(2) {
-      > floox-pill {
+        font-weight: bold;
+        color: #164751;
         > img {
           height: 20px;
         }
       }
+    }
+    .row:nth-child(1) {
       > floox-pill:nth-child(2) {
         --spacing: 2px;
+        color: #164751;
       }
     }
     .row:nth-child(3), .row:nth-child(4) {
       > floox-pill {
-        > img {
-          height: 20px;
-        }
+        color: #7EC6FF;
       }
-    }
-    .row:nth-child(3) {
-      > floox-pill { color: #61e18d; }
-    }
-    .row:nth-child(4) {
-      > floox-pill { color: #db4a4a; }
     }
     .row:nth-child(5) {
       > p {
@@ -261,9 +250,10 @@ paper-spinner {
         color: #5187B7;
       }
       > div {
-        border-radius: 14px;
-        box-shadow: 0 0 4px 1px #0001;
+        border-radius: 8px;
+        box-shadow: 0 0 3px 1px #00000008;
         padding: 24px;
+        background: white;
         position: relative;
 
         > p:first-child {
@@ -375,7 +365,7 @@ paper-spinner {
       > floox-input {
         flex: 1;
         --color: #26464E44;
-        --radius: 24px;
+        --radius: 8px;
       }
 
       > p {
@@ -436,7 +426,7 @@ paper-spinner {
           > img {
             height: 32px;
             max-width: 32px;
-            border-radius: 16px;
+            border-radius: 8px;
 
             box-shadow: 0 0 4px 1px #0001;
           }
@@ -447,8 +437,8 @@ paper-spinner {
       }
       > div {
         background: white;
-        border-radius: 12px;
-        box-shadow: 0 0 4px 1px #0001;
+        border-radius: 8px;
+        box-shadow: 0 0 3px 1px #00000008;
         width: 100%;
         position: relative;
 
@@ -621,7 +611,8 @@ floox-menu {
   }
   > floox-button {
     --fill: transparent;
-    --color: #6F8698;
+    --color: #7EC6FF;
+    --splash: #7EC6FF;
     min-width: 96px;
   }
 }
@@ -629,6 +620,13 @@ floox-nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 80%;
+  @media screen and (max-width: 1080px) {
+    & {
+      width: 84%;
+      justify-content: space-between;
+    }
+  }
 
   > div {
     > a {
@@ -653,8 +651,52 @@ floox-nav {
     }
   }
 }
+floox-panel {
+  > div {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 44px;
+    height: 100%;
+
+    > div {
+      padding: 32px;
+
+      &:first-child {
+        display: flex;
+        flex-flow: column;
+        gap: 12px;
+      }
+
+      > floox-button {
+        font-family: Calibri, sans-serif;
+        font-weight: lighter;
+        font-size: 14pt;
+        cursor: pointer;
+        --color: white;
+        --fill: transparent;
+        --align: start;
+        --splash: #FFFD;
+      }
+      > a {
+        text-decoration: none;
+      }
+      > a:nth-child(1) > floox-button {
+        --color: #7EC5FF;
+        min-width: 88px;
+      }
+      > a:nth-child(2) > floox-button {
+        --color: #7EC5FF;
+      }
+    }
+  }
+}
 
 body.loading {
+  overflow-y: hidden;
+}
+body.noscroll {
   overflow-y: hidden;
 }
 
@@ -670,4 +712,20 @@ floox-loader {
   justify-content: center;
   align-items: center;
   z-index: 9;
+}
+floox-panel {
+  display: none;
+  @media screen and (max-width: 1080px) {
+    & {
+      display: flex;
+    }
+  }
+}
+
+#logsign {
+  @media screen and (max-width: 1080px) {
+    & {
+      display: none;
+    }
+  }
 }

@@ -56,7 +56,7 @@ class Input extends PolymerElement {
                     justify-content: center;
                     align-content: center;
                     
-                    border: 1px solid var(--color, transparent);
+                    border: 0px solid var(--color, transparent);
                     border-radius: var(--radius, 4px);
                     position: relative;
                 }
@@ -73,6 +73,7 @@ class Input extends PolymerElement {
                     width: fit-content;
                     color: var(--color, black);
                     margin: 0;
+                    background: white;
                     
                     padding: 2px;
                     position: absolute;
@@ -104,7 +105,7 @@ class Input extends PolymerElement {
 
         let s = ''
         if (this.raised) {
-            s += 'box-shadow: 0 0 4px 1px #0001;';
+            s += 'box-shadow: 0 0 3px 1px #00000008;';
         }
         if (!this.border) {
             s += 'border: none';
@@ -114,7 +115,6 @@ class Input extends PolymerElement {
     }
 
     valueChange() {
-
         if (this.value.length > 0) {
             this.$.container
                 .querySelector('#ashlabel')
@@ -128,7 +128,8 @@ class Input extends PolymerElement {
 
     validate(value) {
         if(!value) {
-            this.$.container.setAttribute('style', 'box-shadow: 0 0 4px 1px #8002;');
+            this.$.container.setAttribute('style', 'box-shadow: 0 0 3px 1px #8003;');
+            this.$.ashlabel.setAttribute('style', 'color: #8008;');
         }
     }
 }

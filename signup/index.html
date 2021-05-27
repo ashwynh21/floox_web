@@ -23,6 +23,7 @@
     <script src="../src/components/floox.js" type="module"></script>
     <script src="../src/components/rating.js" type="module"></script>
     <script src="../src/components/input.js" type="module"></script>
+    <script src="../src/components/panel.js" type="module" async></script>
 
     <script src="https://apis.google.com/js/platform.js" type="text/javascript"></script>
     <script>
@@ -60,11 +61,28 @@
             <floox-button>Downloads</floox-button>
             <floox-button>Documentation</floox-button>
         </floox-menu>
-        <div>
+        <div id="logsign">
             <a href="../login">
-                <floox-button border>Log in</floox-button>
+                <floox-button raised>Log in</floox-button>
             </a>
         </div>
+        <floox-panel>
+            <div>
+
+                <div>
+                    <a href="../login">
+                        <floox-button raised>Log in</floox-button>
+                    </a>
+                </div>
+
+                <div>
+                    <floox-button>About</floox-button>
+                    <floox-button>Downloads</floox-button>
+                    <floox-button>Documentation</floox-button>
+                </div>
+
+            </div>
+        </floox-panel>
     </floox-nav>
 
     <form class="signup" id="signupform">
@@ -127,6 +145,7 @@
         </div>
     </div>
 
+    <script src="../node_modules/animejs/lib/anime.min.js"></script>
     <script src="../src/javascript/environment.js"></script>
     <script src="../src/javascript/signup.js"></script>
 </body>

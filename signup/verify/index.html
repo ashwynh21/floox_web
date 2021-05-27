@@ -24,6 +24,7 @@
     <script src="../../src/components/floox.js" type="module"></script>
     <script src="../../src/components/rating.js" type="module"></script>
     <script src="../../src/components/input.js" type="module"></script>
+    <script src="../../src/components/panel.js" type="module" async></script>
 </head>
 <body>
 <img class="background" src="../../src/assets/images/background.svg" alt="background"/>
@@ -43,6 +44,34 @@
             <floox-button border>Log in</floox-button>
         </a>
     </div>
+    <div id="logsign">
+        <a href="../../login" id="login">
+            <floox-button raised>Log in</floox-button>
+        </a>
+        <a href="../../signup" id="signup">
+            <floox-button raised>Sign up</floox-button>
+        </a>
+    </div>
+    <floox-panel>
+        <div>
+
+            <div>
+                <a href="../../signup">
+                    <floox-button raised>Sign up</floox-button>
+                </a>
+                <a href="../../login">
+                    <floox-button raised>Log in</floox-button>
+                </a>
+            </div>
+
+            <div>
+                <floox-button>About</floox-button>
+                <floox-button>Downloads</floox-button>
+                <floox-button>Documentation</floox-button>
+            </div>
+
+        </div>
+    </floox-panel>
 </floox-nav>
 
 
@@ -89,6 +118,7 @@
     </div>
 </div>
 
+<script src="../../node_modules/animejs/lib/anime.min.js"></script>
 <script src="../../src/javascript/environment.js"></script>
 <script src="../../src/javascript/verify.js"></script>
 </body>
