@@ -1,0 +1,166 @@
+
+.list {
+  > p:first-child {
+    color: #164751;
+    font-size: 22pt;
+    line-height: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin: 32px 32px 0;
+
+    > strong {
+      color: #7EC6FF;
+    }
+  }
+  > p:nth-child(2) {
+    margin: 32px;
+    font-size: 11pt;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 32px;
+    color: #164751;
+
+    > strong {
+      color: #7EC6FF;
+    }
+  }
+  > p:last-child {
+    margin: 32px;
+    font-size: 11pt;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 32px;
+    color: #164751;
+
+    > strong {
+      color: #7EC6FF;
+    }
+  }
+
+  > .download {
+    background-image: linear-gradient(to top right, #FcFcFc, white);
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px #00000008;
+    overflow: hidden;
+    max-width: 90%;
+    margin: auto;
+    &:nth-last-child(2) {
+      margin-top: 80px;
+    }
+
+    > div:first-child {
+      display: flex;
+      gap: 12px;
+      padding: 8px;
+      align-items: center;
+      background-image: linear-gradient(to top right, #FAFAFA, white);
+
+      > floox-icon {
+        --width: 36px;
+        --height: 36px
+      }
+      > div {
+        width: 1px;
+        height: 28px;
+        border-radius: 1px;
+        background: #16475122;
+      }
+      > img {
+        margin-left: 4px;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+      }
+      > p {
+        font-weight: lighter;
+        color: #164751;
+      }
+    }
+    > div:last-child {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      background: white;
+
+      > div:not(:nth-child(2)) {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        background: white;
+        padding: 16px;
+        min-width: 340px;
+
+        > p:first-child {
+          color: #164751;
+          font-size: 14pt;
+          font-weight: bold;
+          margin: 0;
+        }
+        > p:nth-child(2) {
+          font-size: 9pt;
+          color: #16475188;
+          font-weight: lighter;
+          margin-top: 4px;
+        }
+        > p:nth-child(3) {
+          font-size: 10pt;
+          color: #164751;
+          font-weight: lighter;
+          margin-top: 12px;
+          line-height: 28px;
+
+          > strong {
+            color: #7EC6FF;
+          }
+        }
+        > floox-button {
+          --color: #164751BB;
+          font-weight: lighter;
+        }
+      }
+      > div:nth-child(2) {
+        width: 1px;
+        height: 128px;
+        background: #16475122;
+
+        @media screen and (max-width: 872px) {
+          & {
+            width: 92%;
+            height: 1px;
+            align-self: center;
+            margin: 12px auto;
+          }
+        }
+      }
+      > div:nth-child(3) {
+        align-items: center;
+        justify-content: center;
+
+        > p {
+          max-width: 360px;
+          line-height: 28px;
+        }
+        > floox-button {
+          align-items: center;
+          gap: 12px;
+          display: flex;
+          font-weight: normal;
+          --color: white;
+          margin-bottom: 12px;
+          margin-top: 12px;
+
+          > svg {
+            height: 20px;
+            width: 20px;
+            margin-right: 8px;
+          }
+        }
+        > floox-button:last-child {
+          font-weight: lighter;
+          --color: #164751;
+        }
+      }
+    }
+  }
+}

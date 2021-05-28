@@ -27,6 +27,7 @@ class Floox extends PolymerElement {
                 }
                 svg {
                     height: var(--height, auto);
+                    width: var(--width, auto);
                     transition: transform 0.256s;
                 }
                 svg:hover {

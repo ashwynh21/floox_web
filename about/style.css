@@ -64,7 +64,8 @@
 }
 .about > div > div > p:first-child {
   font-weight: lighter;
-  font-size: 12pt;
+  font-size: 15pt;
+  letter-spacing: 2px;
 }
 .about > div > div > p:last-child {
   font-weight: bold;

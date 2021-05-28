@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Floox | About Us</title>
+
+    <link href="../style.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module" src="../node_modules/@polymer/paper-icon-button/paper-icon-button.js"></script>
+    <script type="module" src="../node_modules/@polymer/iron-icons/iron-icons.js"></script>
+    <script type="module" src="../node_modules/@polymer/paper-checkbox/paper-checkbox.js"></script>
+    <script type="module" src="../node_modules/@polymer/paper-spinner/paper-spinner.js"></script>
+
+    <script src="../src/components/button.js" type="module"></script>
+    <script src="../src/components/navigation.js" type="module"></script>
+    <script src="../src/components/menu.js" type="module"></script>
+    <script src="../src/components/rating.js" type="module"></script>
+    <script src="../src/components/input.js" type="module"></script>
+    <script src="../src/components/floox.js" type="module"></script>
+    <script src="../src/components/panel.js" type="module" async></script>
+
+    <script src="https://apis.google.com/js/platform.js" type="text/javascript"></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '478448533393096',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v10.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function(d, s, id){
+            let js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+</head>
+<body>
+<div class="background">
+    <img src="../src/assets/images/background.svg" alt="background"/>
+</div>
+
+<floox-nav>
+    <div class="floox">
+        <floox-icon href="../"></floox-icon>
+        <p class="floox">Floox</p>
+    </div>
+    <floox-menu>
+        <a href="../about"><floox-button>About</floox-button></a>
+        <a href="../downloads"><floox-button>Downloads</floox-button></a>
+        <a href="../documentation"><floox-button>Documentation</floox-button></a>
+    </floox-menu>
+    <div id="logsign">
+        <a href="../login">
+            <floox-button raised class="accent-button">Log in</floox-button>
+        </a>
+        <a href="../signup">
+            <floox-button raised class="secondary-button">Sign up</floox-button>
+        </a>
+    </div>
+    <floox-panel>
+        <div>
+            <div>
+                <a href="../signup" class="accent-button">
+                    <floox-button raised class="accent-button">Sign up</floox-button>
+                </a>
+            </div>
+
+            <div>
+                <a href="../about"><floox-button>About</floox-button></a>
+                <a href="../downloads"><floox-button>Downloads</floox-button></a>
+                <a href="../documentation"><floox-button>Documentation</floox-button></a>
+            </div>
+        </div>
+    </floox-panel>
+</floox-nav>
+
+<div class="list">
+    <p>Download <strong>Floox</strong> for Meta Trader</p>
+    <p>Connect your account to our ecosystem and optimize your trading performance.</p>
+    <div class="download">
+        <div>
+            <img src="../src/assets/images/mt4.png" alt="MT4">
+            <div></div>
+            <floox-icon href="../"></floox-icon>
+            <p>Meta Trader 4 Compatible</p>
+        </div>
+        <div>
+            <div>
+                <p>Floox Assistance 2021</p>
+                <p>Version 0.1.0</p>
+                <p>
+                    A linking solution, compatible with Meta Trader 4, designed to synchronize trading accounts with the <strong>Floox</strong> ecosystem
+                    to allow clients to apply customized services to automate their trading.
+                </p>
+                <floox-button>release notes</floox-button>
+            </div>
+            <div></div>
+            <div>
+                <floox-button class="tert-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.5" height="27" viewBox="0 0 22.5 27">
+                        <path d="M29.25,14.027H22.823V4.5H13.177v9.527H6.75L18,25.144ZM6.75,28.322V31.5h22.5V28.322Z" transform="translate(-6.75 -4.5)" fill="#FFFFFF"/>
+                    </svg>
+                    download
+                </floox-button>
+
+                <p>Looking for our bleeding edge technology, apply for our beta tester team and be the very first to
+                try out our latest upcoming features.</p>
+                <floox-button>learn more</floox-button>
+            </div>
+        </div>
+    </div>
+
+    <div class="download">
+        <div>
+            <img src="../src/assets/images/mt5.png" alt="MT4">
+            <div></div>
+            <floox-icon href="../"></floox-icon>
+            <p>Meta Trader 5 Compatible</p>
+        </div>
+        <div>
+            <div>
+                <p>Floox Assistance 2021</p>
+                <p>Version 0.1.0</p>
+                <p>
+                    A linking solution, compatible with Meta Trader 5, designed to synchronize trading accounts with the <strong>Floox</strong> ecosystem
+                    to allow clients to apply customized services to automate their trading.
+                </p>
+                <floox-button>release notes</floox-button>
+            </div>
+            <div></div>
+            <div>
+                <floox-button class="tert-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.5" height="27" viewBox="0 0 22.5 27">
+                        <path d="M29.25,14.027H22.823V4.5H13.177v9.527H6.75L18,25.144ZM6.75,28.322V31.5h22.5V28.322Z" transform="translate(-6.75 -4.5)" fill="#FFFFFF"/>
+                    </svg>
+                    download
+                </floox-button>
+
+                <p>Looking for our bleeding edge technology, apply for our beta tester team and be the very first to
+                    try out our latest upcoming features.</p>
+                <floox-button>learn more</floox-button>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        Thank you for trying out our technology, we appreciate it.
+    </p>
+</div>
+
+<div class="footer">
+    <div>
+        <div>
+            <a href="./"><floox-button>About</floox-button></a>
+            <a href="../downloads"><floox-button>Downloads</floox-button></a>
+            <a href="../documentation"><floox-button>Documentation</floox-button></a>
+        </div>
+        <div>
+            <p>Any suggestions that you think could really help improve the Floox platform? Send us an email with your entailments, or you could otherwise give us a rating 😬.</p>
+            <p>info@floox.co.za</p>
+            <div>
+                <floox-rating value="10">
+                </floox-rating>
+                <floox-button border id="rating">
+                    <div>
+                        <img src="../src/assets/icons/send.svg" alt="send">
+                        <p>Send</p>
+                    </div>
+                    <paper-spinner active style="display: none">
+                    </paper-spinner>
+                </floox-button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <floox-icon flat>
+            </floox-icon>
+            <p>Floox</p>
+        </div>
+        <p>&copy; Copyrights 2021</p>
+    </div>
+</div>
+
+<script src="../node_modules/animejs/lib/anime.min.js"></script>
+<script src="../src/javascript/environment.js"></script>
+</body>
+</html>
