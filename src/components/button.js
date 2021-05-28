@@ -1,5 +1,4 @@
 import { PolymerElement, html } from "@polymer/polymer/polymer-element";
-
 import '@polymer/paper-button';
 import '@polymer/paper-spinner/paper-spinner';
 

@@ -1,18 +1,46 @@
 {
   "entrypoint": "index.html",
   "fragments": [
+    "src/components/button.js",
+    "src/components/floox.js",
+    "src/components/input.js",
+    "src/components/loader.js",
+    "src/components/menu.js",
+    "src/components/navigation.js",
+    "src/components/panel.js",
+    "src/components/pill.js",
+    "src/components/rating.js"
   ],
   "sources": [
+    "floox.ico",
+    "style.css",
     "src/**/*",
     "login/**/*",
     "signup/**/*",
-    "about/**/*",
-    "style.css",
-    "floox.ico"
+    "about/**/*"
   ],
   "extraDependencies": [
     "node_modules/@webcomponents/webcomponentsjs/**",
-    "node_modules/d3/**"
+    "node_modules/socket.io-client/**",
+    "node_modules/animejs/**",
+    "node_modules/@polymer/**"
+  ],
+  "builds": [
+    {
+      "name": "production",
+      "preset": "es6-bundled",
+      "addServiceWorker": false,
+      "bundle": true,
+      "addPushManifest": true,
+      "html": {
+        "minify": false,
+        "compile": false
+      },
+      "js": {
+        "minify": true,
+        "compile": false
+      }
+    }
   ],
   "moduleResolution": "node",
   "npm": true
