@@ -1,0 +1,77 @@
+.start {
+  margin: 32px;
+
+  font-weight: lighter;
+  text-align: center;
+  line-height: 32px;
+  max-width: 800px;
+  color: #164751;
+
+  > strong {
+    color: #7EC6FF;
+  }
+}
+.topic {
+  color: #164751;
+  margin: 32px 32px 0;
+  font-size: 22pt;
+  line-height: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+.about {
+  display: flex;
+  flex-flow: column;
+  gap: 32px;
+
+  > div {
+    margin: 0 32px;
+    max-width: 800px;
+
+    > p:first-child {
+      font-size: 16pt;
+      text-align: center;
+      line-height: 32px;
+      color: #164751;
+      font-weight: bold;
+
+      > strong {
+        color: #7EC6FF;
+      }
+    }
+    > p:not(:first-child) {
+      margin: 32px;
+      font-size: 11pt;
+      font-weight: lighter;
+      text-align: center;
+      line-height: 32px;
+      color: #164751;
+
+      > strong {
+        color: #7EC6FF;
+      }
+      > a {
+        text-decoration: none;
+        color: #5187B7;
+      }
+    }
+
+    > div {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      > p {
+        font-family: "Segoe UI", sans-serif;
+        color: #164751;
+
+        &:first-child {
+          font-weight: lighter;
+          font-size: 12pt;
+        }
+        &:last-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

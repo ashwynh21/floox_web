@@ -7,6 +7,7 @@
     <title>Floox | About Us</title>
 
     <link href="../style.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
 
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
@@ -47,7 +48,9 @@
     </script>
 </head>
 <body>
-<img class="background" src="../src/assets/images/background.svg" alt="background"/>
+<div class="background">
+    <img src="../src/assets/images/background.svg" alt="background"/>
+</div>
 
 <floox-nav>
     <div class="floox">
@@ -61,17 +64,17 @@
     </floox-menu>
     <div id="logsign">
         <a href="../login">
-            <floox-button raised>Log in</floox-button>
+            <floox-button raised class="accent-button">Log in</floox-button>
         </a>
         <a href="../signup">
-            <floox-button raised>Sign up</floox-button>
+            <floox-button raised class="secondary-button">Sign up</floox-button>
         </a>
     </div>
     <floox-panel>
         <div>
             <div>
-                <a href="../signup">
-                    <floox-button raised>Sign up</floox-button>
+                <a href="../signup" class="accent-button">
+                    <floox-button raised class="accent-button">Sign up</floox-button>
                 </a>
             </div>
 
@@ -87,17 +90,21 @@
 We will break this page into sections in which we will describe inceptions and other
 events that have brought floox to where it is now
 -->
-<div>
+<p class="topic">
+    Automating the hard parts about Trading
+</p>
+<div class="start">
     Hi, let us tell you bit by bit, the story that has brought <strong>Floox</strong>
     to where it is now. It is crazy when we think back on how loosely the idea began,
     yet here we are, a fully integrated platform where traders can commune 😁.
 </div>
-<div>
+
+<div class="about">
     <div>
         <p>Where <strong>Floox</strong> began 🧐</p>
         <div>
             <p>"Everything begins with an idea."</p>
-            <p>Earl Nightingale</p>
+            <p> - Earl Nightingale - </p>
         </div>
         <p>
             So all our founders are from Eswatini by the way, and we have all known each other
@@ -129,9 +136,6 @@ events that have brought floox to where it is now
             So there's quite a few of us on the <strong>Floox</strong> team, and we are each
             responsible for different functions in <strong>Floox</strong>.
         </p>
-        <div>
-
-        </div>
     </div>
     <div>
         <p>The <strong>Floox</strong> road map</p>
@@ -142,7 +146,7 @@ events that have brought floox to where it is now
         </p>
         <p>
             However, if you want to keep up with the features our developer team is working on you should check out the
-            release notes we have on our <a href="https://www.github.com/ashwynh21/floox_web">github</a>. Here you will
+            release notes we have on our <a target="_blank" href="https://www.github.com/ashwynh21/floox_web">github</a>. Here you will
             get to open discussion on issues you might be experiencing or features you would like directly with the
             developer team.
         </p>
@@ -152,19 +156,13 @@ events that have brought floox to where it is now
         <p>Hang out with us 😎</p>
         <p>
             We all have our preffered areas to lurk on, but as <strong>Floox</strong> you can catch mostly on
-            <a href="https://www.instagram.com/floox">instagram</a>. We will be expanding in future, just at the
+            <a target="_blank" href="https://www.instagram.com/floox">instagram</a>. We will be expanding in future, just at the
             moment we might not have the man power to naturally catch us on any other social media platform.
         </p>
         <div>
             <!--
             Social feed
             -->
-        </div>
-    </div>
-    <div>
-        <p>Send us an email of expression</p>
-        <div>
-            <!--Mail form-->
         </div>
     </div>
 </div>

@@ -8,10 +8,10 @@ body {
   justify-content: space-between;
 }
 paper-spinner {
-  --paper-spinner-layer-1-color: #7EC6FF;
-  --paper-spinner-layer-2-color: #7EC6FF;
-  --paper-spinner-layer-3-color: #7EC6FF;
-  --paper-spinner-layer-4-color: #7EC6FF;
+  --paper-spinner-layer-1-color: #FFFFFF;
+  --paper-spinner-layer-2-color: #FFFFFF;
+  --paper-spinner-layer-3-color: #FFFFFF;
+  --paper-spinner-layer-4-color: #FFFFFF;
 
   height: 20px;
   width: 20px;
@@ -74,7 +74,7 @@ paper-spinner {
 }
 .content {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   margin-top: 64px;
@@ -140,7 +140,6 @@ paper-spinner {
     flex-flow: column;
     gap: 24px;
     position: relative;
-    margin-top: 24px;
 
     .row {
       display: flex;
@@ -148,32 +147,15 @@ paper-spinner {
       width: 80%;
       flex-wrap: wrap;
       gap: 24px;
-
-      > floox-pill {
-        font-weight: bold;
-        color: #164751;
-        > img {
-          height: 20px;
-        }
-      }
     }
-    .row:nth-child(2) {
-      > floox-pill:nth-child(2) {
-        --spacing: 2px;
-        color: #FF419A;
-      }
-    }
-    .row:nth-child(3), .row:nth-child(4) {
-      > floox-pill {
-        color: #7EC6FF;
-      }
-    }
-    .row:nth-child(5) {
+    .row:nth-child(1) { margin-top: 0; margin-bottom: 20px; }
+    .row:nth-child(1), .row:nth-child(4) {
       > p {
         font-family: "Segoe UI", sans-serif;
         color: #164751;
         font-weight: lighter;
         margin-bottom: 0;
+        margin-top: 0;
         font-size: 12pt;
 
         > strong {
@@ -181,6 +163,64 @@ paper-spinner {
           font-weight: bolder;
         }
       }
+    }
+
+    .grid {
+      display: flex;
+      gap: 40px;
+      width: 80%;
+      justify-content: space-evenly;
+
+      > div {
+        display: flex;
+        flex-flow: column;
+        max-width: 200px;
+        flex: 1;
+
+        > div:first-child {
+          padding: 0 30px;
+          height: 64px;
+          background-image: linear-gradient(to top right, #5187B7, #A1D7FF);
+          border-radius: 8px;
+          box-shadow: 0 0 3px 1px #00000011;
+          color: white;
+          font-size: 13pt;
+          font-weight: bold;
+
+          align-self: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 12px;
+          cursor: pointer;
+          position: relative;
+        }
+        > div:nth-child(2) {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+
+          > img { width: 18px; height: 18px; }
+
+          > p {
+            font-family: "Segoe UI", sans-serif;
+            font-weight: normal;
+            margin: 0;
+            font-size: 11pt;
+            color: #164751;
+          }
+        }
+        > p {
+          font-weight: lighter;
+          font-family: "Segoe UI", sans-serif;
+          font-size: 9pt;
+          margin: 12px 0 0;
+          color: #164751;
+        }
+      }
+    }
+    .grid:nth-child(3) {
+      margin-top: 32px;
     }
   }
 }
@@ -739,4 +779,26 @@ floox-panel {
       display: none;
     }
   }
+}
+
+
+/*
+Here we describe component css for the buttons
+*/
+.primary-button {
+  --fill: #5187B7;
+  --alt: #A1D7FF;
+  font-weight: normal;
+}
+.secondary-button {
+  --fill: #FF41A3;
+  --alt: #FF91EF
+}
+.accent-button {
+  --fill: #FcFcFc;
+  --alt: white;
+}
+.tert-button {
+  --fill: #164751;
+  --alt: #468791
 }

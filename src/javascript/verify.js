@@ -69,7 +69,7 @@ if(parameters.get('_id') && parameters.get('otp')) {
             note.innerHTML = 'Awesome, your account is already verified, you can go straight to your dashboard.';
         }
     } else {
-        button.innerHTML = 'Log in';
+        button.children[0].innerHTML = 'Log in';
     }
 
     button.addEventListener('click', () => {

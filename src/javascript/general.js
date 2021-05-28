@@ -21,8 +21,8 @@
         * */
         counter.innerHTML = message.data.clients;
         profit.innerHTML = tocurrency(message.data.profit);
-        won.innerHTML = `${message.data.won} Positions Won`;
-        lost.innerHTML = `${message.data.lost} Positions Lost`;
+        won.innerHTML = message.data.won;
+        lost.innerHTML = message.data.lost;
 
         if(counter.value !== message.data.clients) {
             nudge(counter.parentNode);

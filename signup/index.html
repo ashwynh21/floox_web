@@ -49,8 +49,9 @@
     </script>
 </head>
 <body>
-    <img class="background" src="../src/assets/images/background.svg" alt="background"/>
-
+    <div class="background">
+        <img src="../src/assets/images/background.svg" alt="background"/>
+    </div>
     <floox-nav>
         <div class="floox">
             <floox-icon href="../"></floox-icon>
@@ -63,15 +64,14 @@
         </floox-menu>
         <div id="logsign">
             <a href="../login">
-                <floox-button raised>Log in</floox-button>
+                <floox-button raised class="accent-button">Log in</floox-button>
             </a>
         </div>
         <floox-panel>
             <div>
-
                 <div>
                     <a href="../login">
-                        <floox-button raised>Log in</floox-button>
+                        <floox-button raised class="accent-button">Log in</floox-button>
                     </a>
                 </div>
 
@@ -80,7 +80,6 @@
                     <a href="../downloads"><floox-button>Downloads</floox-button></a>
                     <a href="../documentation"><floox-button>Documentation</floox-button></a>
                 </div>
-
             </div>
         </floox-panel>
     </floox-nav>
@@ -96,7 +95,7 @@
         <p>Please remember to read through our terms of use and application policies to make sure you are comfortable with everything.</p>
 
         <div>
-            <floox-button raised loading id="signup">
+            <floox-button raised loading id="signup" class="primary-button">
                 <div>Sign Up</div>
                 <paper-spinner active></paper-spinner>
             </floox-button>

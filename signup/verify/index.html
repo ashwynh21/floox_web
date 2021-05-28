@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="../../floox.ico" type="image/x-icon">
     <link href="../../style.css" rel="stylesheet"/>
     <link href="../style.css" rel="stylesheet"/>
-    <link href="style.css" rel="stylesheet"/>
 
     <script src="../../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
@@ -27,60 +26,52 @@
     <script src="../../src/components/panel.js" type="module" async></script>
 </head>
 <body>
-<img class="background" src="../../src/assets/images/background.svg" alt="background"/>
-
+<div class="background">
+    <img src="../../src/assets/images/background.svg" alt="background"/>
+</div>
 <floox-nav>
     <div class="floox">
         <floox-icon href="../../"></floox-icon>
         <p class="floox">Floox</p>
     </div>
     <floox-menu>
-        <floox-button>About</floox-button>
-        <floox-button>Downloads</floox-button>
-        <floox-button>Documentation</floox-button>
+        <a href="../../about"><floox-button>About</floox-button></a>
+        <a href="../../downloads"><floox-button>Downloads</floox-button></a>
+        <a href="../../documentation"><floox-button>Documentation</floox-button></a>
     </floox-menu>
-    <div>
-        <a href="../../login">
-            <floox-button border>Log in</floox-button>
-        </a>
-    </div>
     <div id="logsign">
         <a href="../../login" id="login">
-            <floox-button raised>Log in</floox-button>
+            <floox-button raised class="accent-button">Log in</floox-button>
         </a>
         <a href="../../signup" id="signup">
-            <floox-button raised>Sign up</floox-button>
+            <floox-button raised class="secondary-button">Sign up</floox-button>
         </a>
     </div>
     <floox-panel>
         <div>
-
             <div>
                 <a href="../../signup">
-                    <floox-button raised>Sign up</floox-button>
+                    <floox-button raised class="accent-button">Sign up</floox-button>
                 </a>
                 <a href="../../login">
-                    <floox-button raised>Log in</floox-button>
+                    <floox-button raised class="accent-button">Log in</floox-button>
                 </a>
             </div>
-
             <div>
-                <floox-button>About</floox-button>
-                <floox-button>Downloads</floox-button>
-                <floox-button>Documentation</floox-button>
+                <a href="../../about"><floox-button>About</floox-button></a>
+                <a href="../../downloads"><floox-button>Downloads</floox-button></a>
+                <a href="../../documentation"><floox-button>Documentation</floox-button></a>
             </div>
-
         </div>
     </floox-panel>
 </floox-nav>
-
 
 <form class="signup" id="signupform">
     <p>Verify <strong>Floox</strong> Account</p>
 
     <p id="hint">Thanks for joining the Floox community, we have just sent you an email to verify your account.</p>
     <div>
-        <floox-button border id="login">Log in</floox-button>
+        <floox-button id="login" class="primary-button">Log in</floox-button>
     </div>
 </form>
 

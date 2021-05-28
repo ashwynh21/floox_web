@@ -27,8 +27,10 @@ class Button extends PolymerElement {
                     transition: transform 0.256s;
                     text-transform: none;
                     border-radius: 8px;
-                    background: var(--fill, white);
+                    
                     --paper-button-ink-color: var(--splash, #0006) !important;
+                    background-image: linear-gradient(to top right, var(--fill, white), var(--alt, transparent));
+                    
                     justify-content: var(--align, center);
                     border-color: var(--border-color, #0002);
                     border-style: solid;

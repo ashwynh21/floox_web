@@ -1,3 +1,3 @@
 
-const server = 'http://10.0.0.4';
+const server = 'http://localhost';
 const socket = io(server, { transports: ['websocket'] })
