@@ -94,6 +94,8 @@ class Button extends PolymerElement {
                         this.setAttribute('style', 'display: none;');
                         this.innerHTML = "";
                         document.body.classList = [];
+
+                        connector(io(server, { transports: ['websocket'] }));
                     });
             }, 3000);
         };
