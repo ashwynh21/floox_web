@@ -526,7 +526,7 @@ paper-spinner {
     }
   }
   > div:first-child {
-    margin: 4%;
+    margin: 4% 4% 2%;
     gap: 4vw;
     width: 78%;
     > div {
@@ -605,22 +605,24 @@ paper-spinner {
   }
   > div:first-child > div:first-child {
     display: flex;
-    flex-flow: column;
-    gap: 12px;
     align-items: flex-start;
+    flex-flow: column;
 
     > a {
       text-decoration: none;
+
       > floox-button {
         font-family: Calibri, sans-serif;
         font-weight: lighter;
-        font-size: 14pt;
+        font-size: 11pt;
         cursor: pointer;
         --color: white;
         --fill: transparent;
         --align: start;
         --splash: #FFFD;
       }
+    }
+    > div {
     }
   }
   > div:last-child > div:first-child {
