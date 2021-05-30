@@ -29,14 +29,14 @@ paper-spinner {
 
   font-family: Calibri, sans-serif;
   font-weight: bolder;
-  font-size: 19pt;
+  font-size: 21pt;
   letter-spacing: 2px;
   cursor: pointer;
   --height: 68px;
 
   display: flex;
   gap: 16px;
-  transition: transform 0.256s
+  transition: transform 0.256s;
 }
 
 #search {
