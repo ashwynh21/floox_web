@@ -22,14 +22,13 @@ paper-spinner {
   color: #7EC6FF;
   font-family: Calibri, sans-serif;
   font-weight: bolder;
-  font-size: 18pt;
+  font-size: 22pt;
   letter-spacing: 2px;
   cursor: pointer;
   --height: 68px;
 
   display: flex;
   gap: 16px;
-  //
   transition: transform 0.256s;
 }
 
