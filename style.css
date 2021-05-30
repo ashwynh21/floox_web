@@ -18,7 +18,13 @@ paper-spinner {
 }
 
 .floox {
-  color: #7EC6FF;
+  background-image: linear-gradient(45deg, #5187B7, #A1D7FF);
+  background-size: 100%;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: inherit;
+  -moz-text-fill-color: transparent;
   font-family: Calibri, sans-serif;
   font-weight: bolder;
   font-size: 19pt;
