@@ -18,13 +18,7 @@ paper-spinner {
 }
 
 .floox {
-  background-image: linear-gradient(45deg, #5187B7, #A1D7FF);
-  background-size: 100%;
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: inherit;
-  -moz-text-fill-color: transparent;
+  color: #A1D7FF;
   font-family: Calibri, sans-serif;
   font-weight: bolder;
   font-size: 21pt;
@@ -574,7 +568,7 @@ paper-spinner {
 .footer > div:first-child > div:first-child > a > floox-button {
   font-family: Calibri, sans-serif;
   font-weight: lighter;
-  font-size: 11pt;
+  font-size: 12pt;
   cursor: pointer;
   --color: white;
   --fill: transparent;
@@ -742,7 +736,8 @@ Here we describe component css for the buttons
 
 .tert-button {
   --fill: #164751;
-  --alt: #468791 ;
+  --alt: #468791;
+  --color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,7 @@
 
     <link href="../style.css" rel="stylesheet"/>
     <link href="style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="../floox.ico" type="image/x-icon">
 
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
@@ -23,29 +24,6 @@
     <script src="../src/components/input.js" type="module"></script>
     <script src="../src/components/floox.js" type="module"></script>
     <script src="../src/components/panel.js" type="module" async></script>
-
-    <script src="https://apis.google.com/js/platform.js" type="text/javascript"></script>
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '478448533393096',
-                cookie     : true,
-                xfbml      : true,
-                version    : 'v10.0'
-            });
-
-            FB.AppEvents.logPageView();
-
-        };
-
-        (function(d, s, id){
-            let js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
 </head>
 <body>
 <div class="background">
@@ -60,7 +38,7 @@
     <floox-menu>
         <a href="../about"><floox-button>About</floox-button></a>
         <a href="../downloads"><floox-button>Downloads</floox-button></a>
-        <a href="../documentation"><floox-button>Documentation</floox-button></a>
+        <a href="../contact"><floox-button>Contact Us</floox-button></a>
     </floox-menu>
     <div id="logsign">
         <a href="../login">
@@ -81,7 +59,7 @@
             <div>
                 <a href="../about"><floox-button>About</floox-button></a>
                 <a href="../downloads"><floox-button>Downloads</floox-button></a>
-                <a href="../documentation"><floox-button>Documentation</floox-button></a>
+                <a href="../contact"><floox-button>Contact Us</floox-button></a>
             </div>
         </div>
     </floox-panel>
@@ -156,7 +134,7 @@ events that have brought floox to where it is now
         <p>Hang out with us 😎</p>
         <p>
             We all have our preffered areas to lurk on, but as <strong>Floox</strong> you can catch mostly on
-            <a target="_blank" href="https://www.instagram.com/floox">instagram</a>. We will be expanding in future, just at the
+            <a target="_blank" href="https://www.instagram.com/floox"><img src="../src/assets/icons/instagram.svg"/></a>. We will be expanding in future, just at the
             moment we might not have the man power to naturally catch us on any other social media platform.
         </p>
         <div>
@@ -172,7 +150,7 @@ events that have brought floox to where it is now
         <div>
             <a href="./"><floox-button>About</floox-button></a>
             <a href="../downloads"><floox-button>Downloads</floox-button></a>
-            <a href="../documentation"><floox-button>Documentation</floox-button></a>
+            <a href="../contact"><floox-button>Contact Us</floox-button></a>
             <a href="../policy#terms">
                 <floox-button>Terms &amp; Conditions</floox-button>
             </a>

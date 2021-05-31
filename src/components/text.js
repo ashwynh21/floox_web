@@ -2,7 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer';
 
 import '@polymer/paper-input/paper-input.js';
 
-class Input extends PolymerElement {
+class TextArea extends PolymerElement {
     static get properties() {
         return {
             name: {
@@ -12,10 +12,6 @@ class Input extends PolymerElement {
             label: {
                 type: String,
                 value: '',
-            },
-            type: {
-                type: String,
-                value: 'text',
             },
             value: {
                 type: String,
@@ -48,27 +44,25 @@ class Input extends PolymerElement {
                 :host {
                     cursor: pointer;
                     margin: inherit;
-                    position: relative;
-                }
-                :host > div {
                     display: flex;
-                    flex-flow: column;
-                    justify-content: center;
-                    align-content: center;
-                    
-                    border: 0px solid var(--color, transparent);
+                }
+                textarea {
+                    flex: 1;
+                    border: 0 solid var(--color, transparent);
                     border-radius: var(--radius, 8px);
                     position: relative;
-                }
-                input {
-                    height: 32px;
+                    height: inherit;
+                    resize: both;
+                    display: block;
+                    font-size: 14pt;
+                    font-weight: lighter;
+                    line-height: 28px;
+                    width: min-content;
                     padding: 8px 16px;
-                    border: none;
                     background: var(--fill, white);
-                    border-radius: var(--radius, 8px);
                     font-family: var(--font-family, Calibri), sans-serif;
                 }
-                input + p {
+                textarea + p {
                     font-family: var(--font-family, Calibri), sans-serif;
                     width: fit-content;
                     color: var(--color, black);
@@ -88,10 +82,7 @@ class Input extends PolymerElement {
                     transform: translate(8px, -24px) scale(0.9);
                 }
             </style>
-            <div id='container'>
-                <input value="{{value::input}}" tabindex$='[[tabindex]]' name='[[name]]' type='[[type]]'/>
-                <p id="ashlabel">[[label]]</p>
-            </div>
+            <textarea wrap="soft" id="container" value="{{value::input}}" tabindex$='[[tabindex]]' name='[[name]]' placeholder="[[label]]"></textarea>
       `;
     }
 
@@ -134,4 +125,4 @@ class Input extends PolymerElement {
     }
 }
 
-customElements.define('floox-input', Input);
+customElements.define('floox-text', TextArea);

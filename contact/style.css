@@ -1,0 +1,124 @@
+.contact {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.contact > p:first-child {
+  color: #164751;
+  margin: 32px 32px 24px;
+  font-size: 22pt;
+  line-height: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+.contact > p:first-child > strong {
+  color: #7EC6FF;
+}
+.contact > p:nth-child(2), .contact > p:nth-child(3) {
+  font-weight: lighter;
+  text-align: center;
+  line-height: 32px;
+  max-width: 800px;
+  margin: auto;
+  color: #164751;
+}
+.contact > p:nth-child(2) > strong, .contact > p:nth-child(3) > strong {
+  color: #7EC6FF;
+}
+.contact > p:nth-child(3) {
+  margin-top: 32px;
+}
+.contact > #support, .contact > #social, .contact > #beta, .contact > #last {
+  max-width: 700px;
+  margin-top: 32px;
+}
+.contact > #support > p:first-child, .contact > #social > p:first-child, .contact > #beta > p:first-child, .contact > #last > p:first-child {
+  color: #164751;
+  margin-top: 40px;
+  font-size: 14pt;
+  font-weight: bold;
+}
+.contact > #support > p:first-child > strong, .contact > #social > p:first-child > strong, .contact > #beta > p:first-child > strong, .contact > #last > p:first-child > strong {
+  color: #7EC6FF;
+}
+.contact > #support > p:nth-child(2), .contact > #support > p:nth-child(3), .contact > #support > p:nth-child(4), .contact > #social > p:nth-child(2), .contact > #social > p:nth-child(3), .contact > #social > p:nth-child(4), .contact > #beta > p:nth-child(2), .contact > #beta > p:nth-child(3), .contact > #beta > p:nth-child(4), .contact > #last > p:nth-child(2), .contact > #last > p:nth-child(3), .contact > #last > p:nth-child(4) {
+  font-weight: lighter;
+  color: #164751;
+  line-height: 32px;
+}
+.contact > #support > p:nth-child(2) > strong, .contact > #support > p:nth-child(3) > strong, .contact > #support > p:nth-child(4) > strong, .contact > #social > p:nth-child(2) > strong, .contact > #social > p:nth-child(3) > strong, .contact > #social > p:nth-child(4) > strong, .contact > #beta > p:nth-child(2) > strong, .contact > #beta > p:nth-child(3) > strong, .contact > #beta > p:nth-child(4) > strong, .contact > #last > p:nth-child(2) > strong, .contact > #last > p:nth-child(3) > strong, .contact > #last > p:nth-child(4) > strong {
+  color: #7EC6FF;
+}
+.contact > #support > form, .contact > #social > form, .contact > #beta > form, .contact > #last > form {
+  max-width: 700px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.contact > #support > form > floox-text, .contact > #social > form > floox-text, .contact > #beta > form > floox-text, .contact > #last > form > floox-text {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+  min-height: 160px;
+}
+.contact > #support > form > floox-input, .contact > #social > form > floox-input, .contact > #beta > form > floox-input, .contact > #last > form > floox-input {
+  width: 100%;
+}
+.contact > #support > form > div, .contact > #social > form > div, .contact > #beta > form > div, .contact > #last > form > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.contact > #support > form > div > floox-button > p, .contact > #social > form > div > floox-button > p, .contact > #beta > form > div > floox-button > p, .contact > #last > form > div > floox-button > p {
+  margin: 0;
+}
+.contact > #support > form > div > floox-button > paper-spinner, .contact > #social > form > div > floox-button > paper-spinner, .contact > #beta > form > div > floox-button > paper-spinner, .contact > #last > form > div > floox-button > paper-spinner {
+  width: 24px;
+  height: 24px;
+}
+.contact > #support > form > div > p, .contact > #social > form > div > p, .contact > #beta > form > div > p, .contact > #last > form > div > p {
+  font-weight: lighter;
+  text-align: center;
+  line-height: 32px;
+  max-width: 800px;
+  color: #164751;
+}
+.contact > #support > form > div > p > strong, .contact > #social > form > div > p > strong, .contact > #beta > form > div > p > strong, .contact > #last > form > div > p > strong {
+  color: #7EC6FF;
+}
+.contact > #social > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact > #social > div > a {
+  position: relative;
+  padding: 12px;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact > #social > div > a > img {
+  width: 40px;
+  height: 40px;
+}
+.contact > #last > p {
+  font-weight: lighter !important;
+  text-align: center;
+  line-height: 32px;
+  max-width: 800px;
+  font-size: 12pt !important;
+  margin: auto;
+  color: #164751;
+}
+.contact > #last > p > strong {
+  color: #7EC6FF;
+}
+
+/*# sourceMappingURL=style.css.map */
