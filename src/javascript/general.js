@@ -15,7 +15,6 @@ const connector = ((client) => {
     const lost = document.querySelector('#lost');
 
     client.on('general/summary', (message) => {
-        console.log(message);
         /*
         * so here we simply get the dom object that we will fill with
         * this data.

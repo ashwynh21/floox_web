@@ -9,6 +9,7 @@ async function send(message) {
 
         throw Error('Oops, message must be at least 10 characters long');
     }
+    const date = new Date((new Date().setHours(new Date().getHours() - (new Date().getTimezoneOffset() / 60))));
 
     return fetch(`${root}/message`, {
         method: 'post',
@@ -17,8 +18,8 @@ async function send(message) {
         },
         body: JSON.stringify({
             message: message.value,
-            created: new Date().toISOString(),
-            updated: new Date().toISOString()
+            created: date.toISOString(),
+            updated: date.toISOString()
         })
     })
         .then(response => {

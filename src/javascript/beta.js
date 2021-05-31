@@ -9,6 +9,7 @@ async function beta(email) {
 
         throw Error('Oops, email address is invalid.');
     }
+    const date = new Date((new Date().setHours(new Date().getHours() - (new Date().getTimezoneOffset() / 60))));
 
     return fetch(`${root}/beta`, {
         method: 'post',
@@ -16,8 +17,8 @@ async function beta(email) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            created: new Date().toISOString(),
-            updated: new Date().toISOString(),
+            created: date.toISOString(),
+            updated: date.toISOString(),
 
             email: email.value,
         })
