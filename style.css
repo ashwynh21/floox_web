@@ -120,6 +120,9 @@ paper-spinner {
   display: flex;
   margin-top: 24px;
 }
+.content > div:nth-child(1) > div > a {
+  text-decoration: none;
+}
 .content > div:nth-child(1) > div > a > floox-button {
   --fill: #5187B7;
   --color: white;
