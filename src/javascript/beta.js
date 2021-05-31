@@ -52,7 +52,7 @@ async function beta(email) {
             /*
             * Now with the response we can then update the user interface
             * */
-            button.nextSibling.nextSibling.innerHTML = `${response.payload.count}/${response.payload.total}`;
+            button.parentNode.querySelector('#count').innerHTML = `${response.payload.count}/${response.payload.total}`;
         });
 
     button.addEventListener('click', () => {

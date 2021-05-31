@@ -33,7 +33,7 @@
     margin-top: 32px;
   }
 
-  > #support, > #social, > #beta, > #last {
+  > #support, > #social, > #betas, > #last {
     max-width: 700px;
     margin-top: 32px;
 
@@ -82,8 +82,9 @@
             margin: 0;
           }
           > paper-spinner {
-            width: 24px;
-            height: 24px;
+            height: 20px;
+            width: 20px;
+            font-size: 12pt;
           }
         }
         > p {
@@ -142,4 +143,14 @@
       }
     }
   }
+}
+
+#message, #message_error {
+  font-weight: lighter;
+  font-size: 9pt;
+  text-align: center;
+  color: #800 !important;
+}
+#message_error {
+  margin: 0;
 }

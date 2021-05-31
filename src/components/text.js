@@ -105,22 +105,9 @@ class TextArea extends PolymerElement {
             .setAttribute('style', s);
     }
 
-    valueChange() {
-        if (this.value.length > 0) {
-            this.$.container
-                .querySelector('#ashlabel')
-                .setAttribute('style', `transform: translate(8px, -24px) scale(0.9)`);
-        } else {
-            this.$.container
-                .querySelector('#ashlabel')
-                .setAttribute('style', ``);
-        }
-    }
-
     validate(value) {
         if(!value) {
             this.$.container.setAttribute('style', 'box-shadow: 0 0 3px 1px #8003;');
-            this.$.ashlabel.setAttribute('style', 'color: #8008;');
         }
     }
 }

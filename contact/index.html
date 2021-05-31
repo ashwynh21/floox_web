@@ -25,6 +25,9 @@
     <script src="../src/components/text.js" type="module"></script>
     <script src="../src/components/floox.js" type="module"></script>
     <script src="../src/components/panel.js" type="module" async></script>
+
+    <script src="../src/javascript/environment.js"></script>
+    <script src="../src/javascript/socket.js"></script>
 </head>
 <body>
 <!--
@@ -92,7 +95,15 @@ Here we are going to layout ways for people to interact with the people in the f
         </p>
         <form>
             <floox-text raised name="message" type="text" label="Message"></floox-text>
-            <floox-button class="tert-button">Send</floox-button>
+            <div>
+                <floox-button raised id="texter" class="tert-button">
+                    <p>Send</p>
+                    <paper-spinner active style="display: none;">
+                    </paper-spinner>
+                </floox-button>
+                <p id="message_error">
+                </p>
+            </div>
         </form>
     </div>
 
@@ -114,7 +125,7 @@ Here we are going to layout ways for people to interact with the people in the f
     <!--
     Beta Test
     -->
-    <div id="beta">
+    <div id="betas">
         <p>🤓 <strong>Floox</strong> Beta team</p>
         <p>We need all the help we can get!</p>
         <p>It's quite the sweat for our <strong>Dev</strong> team to get new features together, and we need extra hands to test out the new stuff we want to offer to everyone.</p>
@@ -129,7 +140,7 @@ Here we are going to layout ways for people to interact with the people in the f
                     <paper-spinner active style="display: none;">
                     </paper-spinner>
                 </floox-button>
-                <p>0/10</p>
+                <p id="count">0/10</p>
             </div>
             <p id="message">
             </p>
@@ -187,5 +198,9 @@ Here we are going to layout ways for people to interact with the people in the f
 </div>
 
 <script src="../node_modules/animejs/lib/anime.min.js"></script>
+<script src="../src/javascript/general.js"></script>
+<script src="../src/javascript/rating.js"></script>
+<script src="../src/javascript/beta.js"></script>
+<script src="../src/javascript/message.js"></script>
 </body>
 </html>
