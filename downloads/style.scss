@@ -141,19 +141,23 @@
           max-width: 360px;
           line-height: 28px;
         }
-        > floox-button {
-          align-items: center;
-          gap: 12px;
-          display: flex;
-          font-weight: normal;
-          --color: white;
-          margin-bottom: 12px;
-          margin-top: 12px;
 
-          > svg {
-            height: 20px;
-            width: 20px;
-            margin-right: 8px;
+        > a {
+          text-decoration: none;
+          > floox-button {
+            align-items: center;
+            gap: 12px;
+            display: flex;
+            font-weight: normal;
+            --color: white;
+            margin-bottom: 12px;
+            margin-top: 12px;
+
+            > svg {
+              height: 20px;
+              width: 20px;
+              margin-right: 8px;
+            }
           }
         }
         > floox-button:last-child {

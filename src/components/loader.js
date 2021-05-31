@@ -240,7 +240,10 @@ class Button extends PolymerElement {
                 await anime({
                     targets: this.minions,
                     scale: [1, 0],
-                    opacity: [1, 0],
+                    opacity: {
+                        value: [1, 0],
+                        duration: 14
+                    },
                     translateX: window.innerWidth * 0.5,
                     translateY: window.innerHeight * 0.5 - 32,
                     duration: 256,

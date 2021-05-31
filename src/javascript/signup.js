@@ -27,6 +27,8 @@ function google(message, user) {
     /*
     * So now we send this to the server that we have defined
     * */
+    const date = new Date((new Date().setHours(new Date().getHours() - (new Date().getTimezoneOffset() / 60)))).toISOString()
+
     fetch(`${root}/user`, {
         method: 'post',
         headers: {
@@ -35,8 +37,8 @@ function google(message, user) {
         body: JSON.stringify({
             token,
             verifier: 'google',
-            created: (new Date()).toISOString(),
-            updated: (new Date()).toISOString()
+            created: date.toISOString(),
+            updated: date.toISOString()
         })
     })
         .then(response => {
