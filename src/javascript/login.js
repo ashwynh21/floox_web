@@ -9,7 +9,6 @@ async function login(form) {
     const username = form.querySelector('floox-input[name="username"]');
     const password = form.querySelector('floox-input[name="password"]');
 
-
     if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$/i.test(username.value)) {
         username.valid = false;
 
@@ -86,7 +85,7 @@ function google(message, user) {
             * We then save the user and redirect them to the dashboard
             * */
             localStorage.setItem('user', JSON.stringify(user));
-            window.location = '../dashboard';
+            window.location = `../dashboard`;
         })
         .catch(error => {
             console.error(error);
@@ -155,7 +154,7 @@ async function facebook() {
         })
         .then(response => {
             localStorage.setItem('user', JSON.stringify(response.payload));
-            window.location = '../dashboard';
+            window.location = `../dashboard`;
         })
         .catch(error => {
             console.error(error);
@@ -180,8 +179,7 @@ async function facebook() {
 
         login(form, button)
             .then(user => {
-                console.log(user);
-                window.location = '../dashboard';
+                window.location = `../dashboard`;
             })
             .catch(error => {
                 console.error(error);

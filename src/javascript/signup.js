@@ -27,7 +27,7 @@ function google(message, user) {
     /*
     * So now we send this to the server that we have defined
     * */
-    const date = new Date((new Date().setHours(new Date().getHours() - (new Date().getTimezoneOffset() / 60)))).toISOString()
+    const date = new Date((new Date().setHours(new Date().getHours() - (new Date().getTimezoneOffset() / 60))));
 
     fetch(`${root}/user`, {
         method: 'post',
