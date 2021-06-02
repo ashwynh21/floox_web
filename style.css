@@ -18,15 +18,9 @@ paper-spinner {
 }
 
 .floox {
-  color: #A1D7FF;
-  font-family: Calibri, sans-serif;
-  font-weight: bolder;
-  font-size: 21pt;
-  letter-spacing: 2px;
   cursor: pointer;
-  --height: 68px;
-  display: flex;
-  gap: 16px;
+  --width: 144px;
+  margin-top: 8px;
   transition: transform 0.256s;
 }
 
@@ -583,7 +577,7 @@ paper-spinner {
   justify-content: flex-start;
 }
 .footer > div:last-child > div:first-child > floox-icon {
-  --height: 64px;
+  --width: 80px;
 }
 .footer > div:last-child > div:first-child > p {
   color: white;

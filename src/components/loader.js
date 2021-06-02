@@ -36,6 +36,9 @@ class Button extends PolymerElement {
                 svg > * {
                   filter: drop-shadow(0px 0px 1px #00000008);
                 }
+                .st0 { fill: #000405; }
+                .st1 { fill: #00ADF1; }
+                .st2 { fill: none; }
                 #load {
                     color: #7EC6FF;
                     position: relative;
@@ -50,22 +53,14 @@ class Button extends PolymerElement {
             
             <svg id="groups"  xmlns="http://www.w3.org/2000/svg">
                 <!-- -->
-                <g>
-                    <line y1="37.55" transform="translate(22.62 8.483)" fill="#98cbfe" stroke="#5086b6" stroke-miterlimit="10" stroke-width="2"/>
-                    <rect width="10.665" height="28.05" transform="translate(17.288 13.233)" fill="#98cbfe" stroke="#5086b6" stroke-miterlimit="10" stroke-width="2"/>
-                </g>
-                <g>
-                    <line  y2="30.918" transform="translate(6.332 30.059)" fill="#98cbfe" stroke="#5086b6" stroke-miterlimit="10" stroke-width="2"/>
-                    <rect  width="10.665" height="22.046" transform="translate(1 34.495)" fill="#98cbfe" stroke="#5086b6" stroke-miterlimit="10" stroke-width="2"/>
-                </g>
-                <g>
-                    <line y2="34.413" transform="translate(56.428, 1)" fill="#98cbfe" stroke="#5086b6" stroke-miterlimit="10" stroke-width="2"/>
-                    <rect width="10.665" height="24.914" transform="translate(51.096 5.75)" fill="#98cbfe" stroke="#5086b6" stroke-miterlimit="10" stroke-width="2"/>
-                </g>
-                <g>
-                    <line y1="28.633" transform="translate(40.387 26.026)" fill="#98cbfe" stroke="#5086b6" stroke-miterlimit="10" stroke-width="2"/>
-                    <rect width="10.665" height="19.357" transform="translate(35.055 30.663)" fill="#98cbfe" stroke="#5086b6" stroke-miterlimit="10" stroke-width="2"/>
-                </g>
+                <polygon class="st0" points="3.3,1.6 3.3,23.5 10.4,23.5 10.4,15.8 16.5,15.8 16.5,11.4 10.4,11.4 10.4,8 19.3,8 19.3,1.6 "/>
+                <polygon class="st0" points="19.3,23.5 40.7,23.5 40.7,16.4 26.5,16.4 26.5,1.6 19.3,1.6 "/>
+                <path class="st0" d="M48.8,12.5c0,2.6-2.1,4.7-4.7,4.7c-2.6,0-4.7-2.1-4.7-4.7s2.1-4.7,4.7-4.7C46.6,7.8,48.8,9.9,48.8,12.5zM44,0.8c-6.5,0-11.7,5.3-11.7,11.7S37.6,24.3,44,24.3S55.8,19,55.8,12.5S50.5,0.8,44,0.8z"/>
+                <path class="st0" d="M65.4,12.5c0,2.6-2.1,4.7-4.7,4.7s-4.7-2.1-4.7-4.7s2.1-4.7,4.7-4.7S65.4,9.9,65.4,12.5z M60.7,0.8c-6.5,0-11.7,5.3-11.7,11.7s5.3,11.7,11.7,11.7S72.4,19,72.4,12.5S67.1,0.8,60.7,0.8z"/>
+                <polygon class="st1" points="79.1,12.5 75.2,19.3 72.7,23.6 64.8,23.6 71.2,12.5 64.9,1.5 72.8,1.5 75.2,5.6 "/>
+                <polygon class="st0" points="85.4,1.5 79.1,12.5 75.2,5.6 77.5,1.5 "/>
+                <polygon class="st0" points="85.5,23.6 77.6,23.6 75.2,19.3 79.1,12.5 "/>
+                <polygon class="st1" points="99.8,12.6 95.8,19.5 93.5,23.6 85.5,23.6 91.9,12.6 85.5,1.5 93.4,1.5 95.8,5.7 "/>
             </svg>
             <p id="load"></p>
         `;
@@ -230,7 +225,7 @@ class Button extends PolymerElement {
             return new Promise((resolve) => {
                 setTimeout(() => {
                     clearInterval(m.thread);
-                    m.setAttribute('style', `transform: translateX(${window.innerWidth * 0.5 - 32}px) translateY(${window.innerHeight * 0.5 - 64}px) rotateZ(0deg); transition-duration: 0.32s;`);
+                    m.setAttribute('style', `transform: translateX(${window.innerWidth * 0.5 - 48}px) translateY(${window.innerHeight * 0.5 - 24}px) rotateZ(0deg); transition-duration: 0.32s;`);
 
                     setTimeout(resolve, 256);
                 }, (this.minions.indexOf(m) + 1) * 64 + 256);
