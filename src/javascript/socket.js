@@ -1,2 +1,2 @@
 
-const server = 'http://localhost';
+const server = 'https://floox.co.za';
