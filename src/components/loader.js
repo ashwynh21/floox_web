@@ -40,7 +40,7 @@ class Button extends PolymerElement {
                 .st1 { fill: #00ADF1; }
                 .st2 { fill: none; }
                 #load {
-                    color: #7EC6FF;
+                    color: #000405;
                     position: relative;
                     top: 32px;
                     left: 8px;
@@ -141,9 +141,10 @@ class Button extends PolymerElement {
     }
 
     primephysics() {
-        /* Here we need to create multiple asynchronous threads that will be assigned
-        * to manage each particle. */
-
+        /*
+         * Here we need to create multiple asynchronous threads that will be assigned
+         * to manage each particle.
+         * */
         const force = (pointa, pointb, axis) => {
             const r = Math.sqrt((pointa.px - pointb.px) ** 2 + (pointa.py - pointb.py) ** 2);
 
@@ -209,7 +210,7 @@ class Button extends PolymerElement {
                         particle.vx = particle.vx * friction + force(particle, partner, true) + boundary(particle, true);
                         particle.vy = particle.vy * friction + force(particle, partner, false) + boundary(particle, false);
 
-                        particle.rotate = particle.rotate + (particle.rotate < 0 ? -1 : 1) * ((Math.random()) * 0.2);
+                        particle.rotate = particle.rotate + (particle.rotate < 0 ? -1 : 1) * ((Math.random()) * 0.05);
 
                         particle.setAttribute('style', `transform: translateX(${particle.px}px) translateY(${particle.py}px) rotateZ(${particle.rotate}deg)`)
 
@@ -242,7 +243,7 @@ class Button extends PolymerElement {
                     translateX: window.innerWidth * 0.5,
                     translateY: window.innerHeight * 0.5 - 32,
                     duration: 256,
-                    delay: 720,
+                    delay: 1200,
                     easing: 'linear'
                 }).finished;
 
