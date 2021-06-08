@@ -20,6 +20,9 @@ if(parameters.get('_id') && parameters.get('otp')) {
 
         fetch(`${root}/user/verify`, {
             method: 'post',
+            headers: {
+                'Authorization': `Bearer ${user.token}`
+            },
             body: parameters
         })
             .then(response => {
@@ -28,21 +31,15 @@ if(parameters.get('_id') && parameters.get('otp')) {
                 }
 
                 return response.json()
-                    .then(error => {
+                    .then((error) => {
                         throw error;
                     });
             })
             .then(() => {
-                // then we redirect the user properly. since we already have the users data onboard the application
-                // by now then we can access that data and update it.
-
-                // so if the user has not logged in as in there is no local storage then we redirect to log in page
                 if(!localStorage.getItem('user')) {
                     return window.location = '../../login';
                 }
 
-                // then the account is verified so we update the local storage and send the user to their dashboard
-                // since they are already logged in.
                 const user = JSON.parse(localStorage.getItem('user'));
                 user.verified = true;
 
@@ -73,7 +70,6 @@ if(parameters.get('_id') && parameters.get('otp')) {
     }
 
     button.addEventListener('click', () => {
-
         if(localStorage.getItem('user')) {
             window.location = '../../dashboard';
         } else {

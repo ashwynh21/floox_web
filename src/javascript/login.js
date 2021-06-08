@@ -179,6 +179,7 @@ async function facebook() {
 
         login(form, button)
             .then(user => {
+                localStorage.setItem('user', JSON.stringify(user));
                 window.location = `../dashboard`;
             })
             .catch(error => {

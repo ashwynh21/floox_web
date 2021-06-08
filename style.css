@@ -603,8 +603,9 @@ floox-menu > a {
 }
 floox-menu > a > floox-button {
   --fill: transparent;
-  --color: #7EC6FF;
-  --splash: #7EC6FF;
+  --color: black;
+  --splash: black;
+  font-weight: bold;
   min-width: 96px;
 }
 
