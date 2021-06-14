@@ -21,7 +21,7 @@ if(parameters.get('_id') && parameters.get('otp')) {
         fetch(`${root}/user/verify`, {
             method: 'post',
             headers: {
-                'Authorization': `Bearer ${user.token}`
+                'Authorization': `Bearer ${JSON.parse(user).token}`
             },
             body: parameters
         })
@@ -58,7 +58,7 @@ if(parameters.get('_id') && parameters.get('otp')) {
 ((button, note) => {
     // so same thing, if there is data in local storage we check it and offer the user to go to their dashboard.
     if(localStorage.getItem('user')) {
-        button.innerHTML = 'Dashboard';
+        button.innerHTML = '';
         // then we check if this account has not already been verified.
         const user = JSON.parse(localStorage.getItem('user'));
 
