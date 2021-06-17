@@ -115,13 +115,14 @@ export default function Signup() {
                 loader(false);
             })
     }
-    const googlehandler = ({accessToken}) => {
+    const googlehandler = (response) => {
+        console.log(response);
         if(!checked) {
             return contract('Please remember to read our policy agreement and disclaimer and agree to it before signing up.');
         }
         loader(true);
         api(undefined);
-        google(accessToken)
+        google(response.idToken)
             .then(() => {
                 window.location = './verify';
             })
