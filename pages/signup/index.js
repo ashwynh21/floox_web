@@ -99,7 +99,7 @@ export default function Signup() {
             return afirmer('Passwords do not match');
         }
         if(!checked) {
-            return contract('Oops, please remember to read our policy agreement and disclaimer and agree to it before signing up.');
+            return contract('Please remember to read our policy agreement and disclaimer and agree to it before signing up.');
         }
         loader(true);
         api(undefined);
@@ -117,7 +117,7 @@ export default function Signup() {
     }
     const googlehandler = ({accessToken}) => {
         if(!checked) {
-            return contract('Oops, please remember to read our policy agreement and disclaimer and agree to it before signing up');
+            return contract('Please remember to read our policy agreement and disclaimer and agree to it before signing up.');
         }
         loader(true);
         api(undefined);
@@ -134,7 +134,7 @@ export default function Signup() {
     }
     const facebookhandler = (event) => {
         if(!checked) {
-            return contract('Oops, please remember to read our policy agreement and disclaimer and agree to it before signing up');
+            return contract('Please remember to read our policy agreement and disclaimer and agree to it before signing up.');
         }
         loader(true);
         api(undefined);
