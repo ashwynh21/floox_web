@@ -77,7 +77,6 @@ export default function Signup() {
         return afirmer(undefined);
     }
     const policyvalidate = (event) => {
-        console.log(event.target.checked);
         const x = event.target.checked;
 
         policy(x);
@@ -108,7 +107,6 @@ export default function Signup() {
                 window.location = './verify';
             })
             .catch((error) => {
-                console.log(error);
                 api(error.message);
             })
             .finally(() => {
