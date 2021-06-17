@@ -35,10 +35,7 @@ function tocurrency(value) {
 }
 
 export default function Home() {
-  const [clients, online] = useState(undefined);
-  const [profit, ledger] = useState(0);
-  const [wins, winner] = useState(undefined);
-  const [loses, loser] = useState(undefined);
+  const [general, online] = useState({});
   const [beta, teamer] = useState(undefined);
   const [email, mailer] = useState(undefined);
   const [error, checker] = useState(undefined);
@@ -53,24 +50,20 @@ export default function Home() {
 
   const connector = (client) => {
     client.on('general/summary', (message) => {
-      console.log(message);
-      if(clients !== message.data.clients) {
+      online(message.data);
+
+      if(general.clients !== message.data.clients) {
         nudge(clientRef.current);
       }
-      if(profit !== message.data.profit) {
+      if(general.profit !== message.data.profit) {
         nudge(profitRef.current);
       }
-      if(wins !== message.data.won) {
+      if(general.won !== message.data.won) {
         nudge(winsRef.current);
       }
-      if(loses !== message.data.lost) {
+      if(general.lost !== message.data.lost) {
         nudge(losesRef.current);
       }
-
-      online(message.data.clients);
-      ledger(message.data.profit);
-      winner(message.data.won);
-      loser(message.data.lost);
     });
   };
   const handler = (event) => {
@@ -135,9 +128,9 @@ export default function Home() {
               <ButtonBase ref={clientRef} focusRipple style={{backgroundImage: 'linear-gradient(to top right, #FF419A, #FF91EF)'}}>
                 <div>
                   {
-                    clients
+                    !isNaN(general.clients) && general.clients > -1
                         ?
-                        clients
+                        general.clients
                         :
                         <CircularProgress size={24} color={'white'}/>
                   }
@@ -155,9 +148,9 @@ export default function Home() {
               <ButtonBase ref={profitRef} focusRipple style={{backgroundImage: 'linear-gradient(to top right, #5187B7, #A1D7FF)'}}>
                 <div>
                   {
-                    profit
+                    !isNaN(general.profit)
                         ?
-                        tocurrency(profit)
+                        tocurrency(general.profit)
                         :
                         <CircularProgress size={24} color={'white'}/>
                   }
@@ -177,9 +170,9 @@ export default function Home() {
               <ButtonBase ref={winsRef} focusRipple style={{backgroundImage: 'linear-gradient(to top right, #5187B7, #A1D7FF)'}}>
                 <div>
                   {
-                    wins
+                    !isNaN(general.won) && general.won > -1
                         ?
-                        wins
+                        general.won
                         :
                         <CircularProgress size={24} color={'white'}/>
                   }
@@ -197,9 +190,9 @@ export default function Home() {
               <ButtonBase ref={losesRef} focusRipple style={{backgroundImage: 'linear-gradient(to top right, #FF419A, #FF91EF)'}}>
                 <div>
                   {
-                    loses
+                    !isNaN(general.lost) && general.lost > -1
                         ?
-                        loses
+                        general.lost
                         :
                         <CircularProgress size={24} color={'white'}/>
                   }
