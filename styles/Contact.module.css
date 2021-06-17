@@ -1,0 +1,140 @@
+.contact {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: auto;
+}
+.contact > p:first-child {
+  color: #164751;
+  margin: 32px 32px 24px;
+  font-size: 22pt;
+  line-height: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+.contact > p:first-child > strong {
+  color: #7EC6FF;
+}
+.contact > p:nth-child(2), .contact > p:nth-child(3) {
+  font-weight: lighter;
+  text-align: center;
+  line-height: 32px;
+  max-width: 800px;
+  margin: auto;
+  color: #164751;
+}
+.contact > p:nth-child(2) > strong, .contact > p:nth-child(3) > strong {
+  color: #7EC6FF;
+}
+.contact > p:nth-child(3) {
+  margin-top: 32px;
+}
+
+.message, .message_error {
+  font-weight: lighter;
+  font-size: 10pt;
+  text-align: center;
+  color: #800 !important;
+}
+
+.support, .social, .betas, .last {
+  max-width: 700px;
+  margin-top: 32px;
+}
+.support > p:first-child, .social > p:first-child, .betas > p:first-child, .last > p:first-child {
+  color: #164751;
+  margin-top: 40px;
+  font-size: 14pt;
+  font-weight: bold;
+}
+.support > p:first-child > strong, .social > p:first-child > strong, .betas > p:first-child > strong, .last > p:first-child > strong {
+  color: #7EC6FF;
+}
+.support > p:nth-child(2), .support > p:nth-child(3), .support > p:nth-child(4), .social > p:nth-child(2), .social > p:nth-child(3), .social > p:nth-child(4), .betas > p:nth-child(2), .betas > p:nth-child(3), .betas > p:nth-child(4), .last > p:nth-child(2), .last > p:nth-child(3), .last > p:nth-child(4) {
+  font-weight: lighter;
+  color: #164751;
+  line-height: 32px;
+}
+.support > p:nth-child(2) > strong, .support > p:nth-child(3) > strong, .support > p:nth-child(4) > strong, .social > p:nth-child(2) > strong, .social > p:nth-child(3) > strong, .social > p:nth-child(4) > strong, .betas > p:nth-child(2) > strong, .betas > p:nth-child(3) > strong, .betas > p:nth-child(4) > strong, .last > p:nth-child(2) > strong, .last > p:nth-child(3) > strong, .last > p:nth-child(4) > strong {
+  color: #7EC6FF;
+}
+.support > form, .social > form, .betas > form, .last > form {
+  max-width: 700px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.support > form > div:first-child, .social > form > div:first-child, .betas > form > div:first-child, .last > form > div:first-child {
+  margin-top: 12px;
+  box-shadow: 0 0 3px 1px #00000008;
+  width: 100%;
+}
+.support > form > div:first-child > div, .social > form > div:first-child > div, .betas > form > div:first-child > div, .last > form > div:first-child > div {
+  border-radius: 8px !important;
+  box-shadow: 0 1px 4px 1px #0001;
+}
+.support > form > div:not(:first-child), .social > form > div:not(:first-child), .betas > form > div:not(:first-child), .last > form > div:not(:first-child) {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.support > form > div:not(:first-child) Button, .social > form > div:not(:first-child) Button, .betas > form > div:not(:first-child) Button, .last > form > div:not(:first-child) Button {
+  height: 44px;
+  width: 88px;
+}
+.support > form > div:not(:first-child) Button p, .social > form > div:not(:first-child) Button p, .betas > form > div:not(:first-child) Button p, .last > form > div:not(:first-child) Button p {
+  color: white;
+  margin: 0 8px 0 0;
+}
+.support > form > div:not(:first-child) > p, .social > form > div:not(:first-child) > p, .betas > form > div:not(:first-child) > p, .last > form > div:not(:first-child) > p {
+  font-weight: lighter;
+  text-align: center;
+  line-height: 32px;
+  max-width: 800px;
+  color: #164751;
+}
+.support > form > div:not(:first-child) > p > strong, .social > form > div:not(:first-child) > p > strong, .betas > form > div:not(:first-child) > p > strong, .last > form > div:not(:first-child) > p > strong {
+  color: #7EC6FF;
+}
+
+.social > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social > div > a {
+  position: relative;
+  padding: 12px;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social > div > a > img {
+  width: 40px;
+  height: 40px;
+}
+
+.last > p {
+  font-weight: lighter !important;
+  text-align: center;
+  line-height: 32px;
+  max-width: 800px;
+  font-size: 12pt !important;
+  margin: auto;
+  color: #164751;
+}
+.last > p > strong {
+  color: #7EC6FF;
+}
+
+.input {
+  min-width: 320px !important;
+}
+
+/*# sourceMappingURL=Contact.module.css.map */

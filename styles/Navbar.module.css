@@ -1,0 +1,119 @@
+.container {
+  display: flex;
+  flex-flow: column;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  overflow-x: hidden;
+}
+.background:first-child {
+  top: 0;
+  min-height: 50vh;
+  justify-content: center;
+}
+.background:nth-child(2) {
+  top: 60vh;
+  left: 0;
+  width: 60%;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+}
+@media screen and (max-width: 1080px) {
+  .menu {
+    display: none;
+  }
+}
+.menu Button {
+  background: transparent;
+  color: black;
+  font-weight: bold;
+  min-width: 96px;
+  font-size: 12pt;
+  white-space: nowrap;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: space-around;
+  width: 80%;
+  padding: 24px 0;
+  gap: 10%;
+}
+@media screen and (max-width: 1080px) {
+  .navigation {
+    width: 84%;
+    justify-content: space-between;
+  }
+}
+
+.panel {
+  display: none;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 44px;
+  height: 100%;
+}
+.panel > div {
+  padding: 32px;
+}
+.panel > div:first-child {
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+}
+.panel > div Button {
+  color: #7EC5FF;
+  background-image: linear-gradient(to top right, #FcFcFc, white);
+  min-width: 88px;
+}
+.panel > div:last-child {
+  display: flex;
+  flex-flow: column;
+}
+.panel > div:last-child Button {
+  background: transparent;
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  font-size: 14pt;
+  cursor: pointer;
+  color: white;
+  fill: transparent;
+  align-self: start;
+}
+@media screen and (max-width: 1080px) {
+  .panel {
+    display: flex;
+  }
+}
+
+.image {
+  margin: 0;
+  height: 100vh;
+}
+
+.logsign {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.logsign Button {
+  min-width: 88px;
+  font-size: 12pt;
+  font-weight: normal;
+}
+@media screen and (max-width: 1080px) {
+  .logsign {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Navbar.module.css.map */

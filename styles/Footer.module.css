@@ -1,0 +1,114 @@
+.footer {
+  margin-top: 96px;
+  background: #5187B7;
+  box-shadow: 0 0 8px 1px #0002;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+.footer Button {
+  text-transform: none;
+  color: white;
+  font-family: Calibri, sans-serif;
+}
+.footer > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer > div > div {
+  flex: 1;
+}
+.footer > div:first-child {
+  margin: 4% 4% 2%;
+  gap: 4vw;
+  width: 78%;
+}
+.footer > div:first-child > div {
+  min-width: 256px;
+}
+.footer > div:last-child {
+  width: 90%;
+  margin-bottom: 12px;
+}
+.footer > div:first-child > div:last-child > p {
+  color: white;
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  line-height: 28px;
+}
+.footer > div:first-child > div:last-child > p:nth-child(2) {
+  font-weight: bold;
+  cursor: pointer;
+}
+.footer > div:first-child > div:last-child div {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer > div:first-child > div:last-child div > Rating {
+  width: 180px;
+}
+.footer > div:first-child > div:last-child div > Button {
+  border: 1px solid white;
+  width: 96px;
+}
+.footer > div:first-child > div:last-child div > Button div {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.footer > div:first-child > div:last-child div > Button div > p {
+  margin: 0;
+  font-size: 12pt;
+}
+.footer > div:first-child > div:last-child div > Button > CircularProgress {
+  height: 20px;
+  width: 20px;
+  font-size: 12pt;
+}
+.footer > div:first-child > div:last-child > Button {
+  border: 1px solid white;
+  color: white;
+  height: 44px;
+  width: 256px;
+  font-size: 10pt;
+  font-weight: bolder;
+}
+.footer > div:first-child > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column;
+  gap: 4px;
+}
+.footer > div:first-child > div:first-child > Button {
+  font-weight: lighter;
+  font-size: 12pt;
+  cursor: pointer;
+}
+.footer > div:first-child > div:first-child > Button:hover {
+  background: #FFF1;
+}
+.footer > div:last-child > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer > div:last-child > div:first-child > p {
+  color: white;
+  font-weight: bolder;
+}
+.footer > div:last-child > p:last-child {
+  display: flex;
+  justify-content: flex-end;
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  color: white;
+  margin: 0;
+  align-items: center;
+}
+
+/*# sourceMappingURL=Footer.module.css.map */

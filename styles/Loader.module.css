@@ -1,0 +1,50 @@
+.host {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 15;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 1px;
+  opacity: 0;
+}
+
+.svg > * {
+  filter: drop-shadow(0px 0px 1px #00000008);
+}
+
+.st0 {
+  fill: #000405;
+}
+
+.st1 {
+  fill: #00ADF1;
+}
+
+.circle {
+  border-radius: 50%;
+  background: #7EC6FF;
+  position: absolute;
+}
+
+.load {
+  color: #000405;
+  position: relative;
+  top: 32px;
+  left: 8px;
+  font-weight: bold;
+  font-size: 12pt;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 2px #00000008;
+}
+
+/*# sourceMappingURL=Loader.module.css.map */
