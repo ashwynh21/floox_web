@@ -35,10 +35,10 @@ function tocurrency(value) {
 }
 
 export default function Home() {
-  const [clients, online] = useState(0);
+  const [clients, online] = useState(undefined);
   const [profit, ledger] = useState(0);
-  const [wins, winner] = useState(0);
-  const [loses, loser] = useState(0);
+  const [wins, winner] = useState(undefined);
+  const [loses, loser] = useState(undefined);
   const [beta, teamer] = useState(undefined);
   const [email, mailer] = useState(undefined);
   const [error, checker] = useState(undefined);
@@ -53,6 +53,7 @@ export default function Home() {
 
   const connector = (client) => {
     client.on('general/summary', (message) => {
+      console.log(message);
       if(clients !== message.data.clients) {
         nudge(clientRef.current);
       }
@@ -134,9 +135,9 @@ export default function Home() {
               <ButtonBase ref={clientRef} focusRipple style={{backgroundImage: 'linear-gradient(to top right, #FF419A, #FF91EF)'}}>
                 <div>
                   {
-                    clients > 0
+                    clients
                         ?
-                        clients.toString()
+                        clients
                         :
                         <CircularProgress size={24} color={'white'}/>
                   }
@@ -154,7 +155,7 @@ export default function Home() {
               <ButtonBase ref={profitRef} focusRipple style={{backgroundImage: 'linear-gradient(to top right, #5187B7, #A1D7FF)'}}>
                 <div>
                   {
-                    profit !== 0
+                    profit
                         ?
                         tocurrency(profit)
                         :
@@ -176,7 +177,7 @@ export default function Home() {
               <ButtonBase ref={winsRef} focusRipple style={{backgroundImage: 'linear-gradient(to top right, #5187B7, #A1D7FF)'}}>
                 <div>
                   {
-                    wins > 0
+                    wins
                         ?
                         wins
                         :
@@ -196,7 +197,7 @@ export default function Home() {
               <ButtonBase ref={losesRef} focusRipple style={{backgroundImage: 'linear-gradient(to top right, #FF419A, #FF91EF)'}}>
                 <div>
                   {
-                    loses > 0
+                    loses
                         ?
                         loses
                         :
