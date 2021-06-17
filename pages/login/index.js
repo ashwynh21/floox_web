@@ -142,7 +142,7 @@ export default function Login() {
                         <Image src="/icons/facebook.svg" height={20} width={20}/>
                     </IconButton>
                 </div>
-                <Link href="./recover">
+                <Link href="/login/recover">
                     <Button style={{color: '#5187B7'}}>forgot password?</Button>
                 </Link>
             </div>
