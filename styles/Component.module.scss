@@ -1,0 +1,46 @@
+
+.rating {
+  position: relative;
+  cursor: pointer;
+  height: 28px;
+  width: 180px;
+
+  input {
+    cursor: pointer;
+    position: absolute;
+    min-height: 28px;
+    width: 180px;
+    opacity: 0
+  }
+  svg {
+    pointer-events: none;
+    width: 180px;
+    height: 28px;
+  }
+}
+
+.floox {
+  cursor: pointer;
+  svg line, svg rect {
+    filter: drop-shadow(0 0 2px #00000008);
+  }
+  svg {
+    transition: transform 0.256s;
+  }
+  svg:hover {
+    transform: scale(1.05)
+  }
+  svg > g > g { transition: transform 0.256s; transform-origin: center; }
+  svg > g > g:hover {
+    transform: scale(1.05)
+  }
+}
+
+.flat > * {
+  stroke: white !important;
+  fill: white !important;
+  filter: none !important;
+}
+
+.st0 { fill: #000405; }
+.st1 { fill: #00ADF1; }

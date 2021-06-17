@@ -19,10 +19,11 @@ Button {
   border-radius: 8px !important;
   text-transform: none !important;
   transition: transform 256ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
-}
-Button:hover {
-  transition: transform 256ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
-  transform: scale(1.05);
+
+  &:hover {
+    transition: transform 256ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+    transform: scale(1.05);
+  }
 }
 
 .primarybutton {
@@ -30,16 +31,13 @@ Button:hover {
   color: white;
   font-weight: normal;
 }
-
 .secondarybutton {
   background-image: linear-gradient(to top right, #FF41A3, #FF91EF);
   color: white;
 }
-
 .accentbutton {
   background-image: linear-gradient(to top right, #FcFcFc, white);
 }
-
 .tertbutton {
   background-image: linear-gradient(to top right, #164751, #468791);
   color: white !important;
@@ -48,9 +46,6 @@ Button:hover {
 .loading {
   overflow-y: hidden;
 }
-
 .noscroll {
   overflow-y: hidden;
 }
-
-/*# sourceMappingURL=globals.css.map */

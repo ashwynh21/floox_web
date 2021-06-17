@@ -1,121 +1,402 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+.github {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin: 96px auto auto;
+  width: 80%;
+  gap: 8vw;
+  flex-wrap: wrap;
+}
+.github > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+  flex: 1;
+}
+.github > div:first-child {
+  min-width: 320px;
+}
+.github > div:first-child > div:first-child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.github > div:first-child > div:first-child > div {
+  min-width: 0.64px;
+  height: 32px;
+  margin: 0 16px;
+  background: #0002;
+}
+.github > div:first-child > div:first-child > p:last-child {
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  font-size: 12pt;
+  color: #164751;
+}
+.github > div:first-child > div:first-child > p:first-child {
+  font-family: Calibri, sans-serif;
+  font-size: 22pt;
+  font-weight: bold;
+  color: #164751;
+}
+.github > div:first-child > div:first-child > p:first-child > strong {
+  color: #7EC6FF;
+}
+.github > div:first-child > p:nth-child(2), .github > div:first-child > p:nth-child(3), .github > div:first-child > p:nth-child(4) {
+  font-size: 12pt;
+  color: #26464E;
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  line-height: 32px;
+}
+.github > div:first-child > p:nth-child(2) > strong, .github > div:first-child > p:nth-child(3) > strong, .github > div:first-child > p:nth-child(4) > strong {
+  color: #7EC6FF;
+}
+.github > div:first-child > form {
+  width: 94%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+.github > div:first-child > form > div {
+  flex: 1;
+}
+.github > div:first-child > form > div > div {
+  border-radius: 8px !important;
+  box-shadow: 0 0px 3px 1px #00000001;
+}
+.github > div:first-child > form > Button {
+  background-image: linear-gradient(to top right, #164751, #468791);
+  color: white;
+  min-width: 80px;
+  margin-top: 6px;
+  height: 44px;
+}
+.github > div:first-child > form > Button > p {
+  margin: 0;
+}
+.github > div:first-child > form > p {
+  font-weight: lighter;
+  margin-top: 18px;
+}
+.github > div:first-child > #message {
+  font-weight: lighter;
+  font-size: 9pt;
+  text-align: center;
+  color: #800;
+}
+.github > div:last-child {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+  min-width: 320px;
+}
+.github > div:last-child > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.github > div:last-child > div:first-child > img {
+  height: 28px;
+}
+.github > div:last-child > div:first-child > p {
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  color: #164751;
+  font-size: 12pt;
+}
+.github > div:last-child > div:not(:first-child) {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+.github > div:last-child > div:not(:first-child) > span {
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  color: #164751;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  width: 100%;
+}
+.github > div:last-child > div:not(:first-child) > span > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.github > div:last-child > div:not(:first-child) > span > div > img {
+  height: 32px;
+  max-width: 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 1px #0001;
+}
+.github > div:last-child > div:not(:first-child) > span > p {
+  margin: 0;
+}
+.github > div:last-child > div:not(:first-child) > div {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 3px 1px #00000008;
+  width: 100%;
+  position: relative;
+}
+.github > div:last-child > div:not(:first-child) > div > p {
+  font-family: Calibri, sans-serif;
+  color: #164751;
+  font-weight: lighter;
+  line-height: 24px;
+  margin: 24px;
+}
+.github > div:last-child > a > Button {
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  font-size: 12pt;
+  color: #5187B7;
 }
 
-.main {
-  padding: 5rem 0;
+.input {
+  min-width: 320px !important;
+}
+
+.started {
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+  align-items: center;
+  margin: 96px auto auto;
+  width: 90%;
+  align-self: center;
+}
+
+.title {
+  font-family: Calibri, sans-serif;
+  font-size: 22pt;
+  font-weight: bold;
+  color: #164751;
+  margin-bottom: 0;
+}
+.title > strong {
+  color: #7EC6FF;
+}
+
+.description {
+  font-size: 13pt;
+  color: #5187B7;
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  width: 50%;
+  text-align: center;
+  min-width: 320px;
+  line-height: 32px;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 4vw 64px;
+  flex-wrap: wrap;
+}
+.steps > div > p {
+  font-family: Calibri, sans-serif;
+  font-weight: lighter;
+  color: #5187B7;
+}
+.steps > div > div {
+  border-radius: 8px;
+  box-shadow: 0 0 3px 1px #00000008;
+  padding: 24px;
+  background: white;
+  position: relative;
+}
+.steps > div > div > p:first-child {
+  color: #164751;
+  font-size: 14pt;
+  margin-top: 0;
+  font-weight: bold;
+}
+.steps > div > div > p:nth-child(2) {
+  color: #5187B7;
+  font-size: 11pt;
+  margin-top: 0;
+  font-weight: lighter;
+  font-family: Calibri, sans-serif;
+}
+
+.emails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 128px;
+}
+.emails > div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.emails > div > img {
+  height: 28px;
+}
+.emails > div > p {
+  font-family: Calibri, sans-serif;
+  color: #7EC6FF;
+  font-weight: lighter;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 64px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.content > div {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 600px;
+  min-width: 380px;
 }
-
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+.content > div:nth-child(1) {
+  text-align: left;
+  min-width: 320px;
+}
+.content > div:nth-child(1) > p, .content > div:nth-child(1) > div {
+  width: 80%;
+}
+.content > div:nth-child(1) > p:first-child {
+  margin-top: 0;
+  font-size: 22pt;
+  color: #164751;
+  line-height: 48px;
+  font-weight: bold;
+}
+.content > div:nth-child(1) > p:first-child > strong {
+  color: #7EC6FF;
+  font-weight: bold;
+}
+.content > div:nth-child(1) > p:nth-child(2), .content > div:nth-child(1) p:nth-child(3) {
+  font-family: "Segoe UI", sans-serif;
+  color: #164751;
+  font-size: 12pt;
+  font-weight: lighter;
+}
+.content > div:nth-child(1) > p:nth-child(2) > strong, .content > div:nth-child(1) p:nth-child(3) > strong {
+  color: #7EC6FF;
+  font-weight: bolder;
+}
+.content > div:nth-child(1) > p:nth-child(3) {
+  line-height: 28px;
+}
+.content > div:nth-child(1) > div {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 24px;
 }
-
-.footer a {
+.content > div:nth-child(1) > div Button {
+  color: white;
+  width: 112px;
+}
+.content > div:nth-child(2) {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  flex-flow: column;
+  gap: 24px;
+  position: relative;
 }
 
 .grid {
   display: flex;
-  align-items: center;
+  gap: 40px;
+  width: 80%;
+  justify-content: space-evenly;
+}
+.grid:nth-child(3) {
+  margin-top: 32px;
+}
+.grid > div {
+  display: flex;
+  flex-flow: column;
+  max-width: 200px;
+  flex: 1;
+}
+.grid > div Button:first-child {
+  padding: 0 30px;
+  height: 64px;
+  background-image: linear-gradient(to top right, #5187B7, #A1D7FF);
+  font-family: Roboto, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 3px 1px #00000011;
+  color: white;
+  font-size: 13pt;
+  font-weight: bold;
+  align-self: center;
+  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  position: relative;
 }
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+.grid > div > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.grid > div > div:nth-child(2) > img {
+  width: 18px;
+  height: 18px;
 }
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
+.grid > div > div:nth-child(2) > p {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: normal;
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 11pt;
+  color: #164751;
+}
+.grid > div > p {
+  font-weight: lighter;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 9pt;
+  margin: 12px 0 0;
+  color: #164751;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.sublink > p {
+  width: 80%;
+  font-family: "Segoe UI", sans-serif;
+  color: #164751;
+  font-weight: lighter;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12pt;
+}
+.sublink > p Button {
+  border-radius: 50% !important;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  margin-left: 8px;
+}
+.sublink > p > strong {
+  color: #7EC6FF;
+  font-weight: bolder;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.error {
+  font-weight: lighter;
+  font-size: 10pt;
+  color: #D00;
 }
+
+/*# sourceMappingURL=Home.module.css.map */

@@ -1,0 +1,124 @@
+
+.footer {
+  margin-top: 96px;
+  background: #5187B7;
+  box-shadow: 0 0 8px 1px #0002;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+
+  Button {
+    text-transform: none;
+    color: white;
+    font-family: Calibri, sans-serif;
+  }
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      flex: 1;
+    }
+  }
+  > div:first-child {
+    margin: 4% 4% 2%;
+    gap: 4vw;
+    width: 78%;
+    > div {
+      min-width: 256px;
+    }
+  }
+  > div:last-child {
+    width: 90%;
+    margin-bottom: 12px;
+  }
+  > div:first-child > div:last-child {
+    > p {
+      color: white;
+      font-family: Calibri, sans-serif;
+      font-weight: lighter;
+      line-height: 28px;
+    }
+    > p:nth-child(2) {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    div {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+
+      > Rating {
+        width: 180px;
+      }
+      > Button {
+        border: 1px solid white;
+        width: 96px;
+
+        div {
+          display: flex;
+          justify-content: center;
+          gap: 12px;
+          > p {
+            margin: 0;
+            font-size: 12pt;
+          }
+        }
+
+        > CircularProgress {
+          height: 20px;
+          width: 20px;
+          font-size: 12pt;
+        }
+      }
+    }
+
+    > Button {
+      border: 1px solid white;
+      color: white;
+      height: 44px;
+      width: 256px;
+
+      font-size: 10pt;
+      font-weight: bolder;
+    }
+  }
+  > div:first-child > div:first-child {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    gap: 4px;
+
+    > Button {
+      font-weight: lighter;
+      font-size: 12pt;
+      cursor: pointer;
+      &:hover {
+        background: #FFF1;
+      }
+    }
+  }
+  > div:last-child > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    > p {
+      color: white;
+      font-weight: bolder
+    }
+  }
+  > div:last-child > p:last-child {
+    display: flex;
+    justify-content: flex-end;
+    font-family: Calibri, sans-serif;
+    font-weight: lighter;
+    color: white;
+    margin: 0;
+    align-items: center;
+  }
+}

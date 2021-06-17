@@ -1,0 +1,153 @@
+.contact {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: auto;
+
+  > p:first-child {
+    color: #164751;
+    margin: 32px 32px 24px;
+    font-size: 22pt;
+    line-height: 48px;
+    font-weight: bold;
+    text-align: center;
+    > strong {
+      color: #7EC6FF;
+    }
+  }
+  > p:nth-child(2), > p:nth-child(3) {
+
+    font-weight: lighter;
+    text-align: center;
+    line-height: 32px;
+    max-width: 800px;
+    margin: auto;
+    color: #164751;
+
+    > strong {
+      color: #7EC6FF;
+    }
+  }
+  > p:nth-child(3) {
+    margin-top: 32px;
+  }
+}
+
+.message, .message_error {
+  font-weight: lighter;
+  font-size: 10pt;
+  text-align: center;
+  color: #800 !important;
+}
+.support, .social, .betas, .last {
+  max-width: 700px;
+  margin-top: 32px;
+
+  > p:first-child {
+    color: #164751;
+    margin-top: 40px;
+    font-size: 14pt;
+    font-weight: bold;
+    > strong {
+      color: #7EC6FF;
+    }
+  }
+  > p:nth-child(2), > p:nth-child(3), > p:nth-child(4) {
+    font-weight: lighter;
+    color: #164751;
+    line-height: 32px;
+    > strong {
+      color: #7EC6FF;
+    }
+  }
+  > form {
+    max-width: 700px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+
+    > div:first-child {
+      margin-top: 12px;
+      box-shadow: 0 0 3px 1px #00000008;
+      width: 100%;
+
+      > div {
+        border-radius: 8px !important;
+        box-shadow: 0 1px 4px 1px #0001;
+      }
+    }
+
+    > div:not(:first-child) {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+
+      Button {
+        height: 44px;
+        width: 88px;
+
+        p {
+          color: white;
+          margin: 0 8px 0 0;
+        }
+      }
+      > p {
+        font-weight: lighter;
+        text-align: center;
+        line-height: 32px;
+        max-width: 800px;
+        color: #164751;
+
+        > strong {
+          color: #7EC6FF;
+        }
+      }
+    }
+  }
+}
+.social {
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > a {
+      position: relative;
+      padding: 12px;
+      border-radius: 50%;
+
+      width: 64px;
+      height: 64px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+.last {
+  > p {
+    font-weight: lighter !important;
+    text-align: center;
+    line-height: 32px;
+    max-width: 800px;
+    font-size: 12pt !important;
+    margin: auto;
+    color: #164751;
+
+    > strong {
+      color: #7EC6FF;
+    }
+  }
+}
+.input {
+  min-width: 320px !important;
+}
