@@ -274,7 +274,7 @@ export default function Home() {
             our <strong>Floox</strong> Beta team. Who knows, there might be something for your efforts in the end 😉.
           </p>
 
-          <form style={{flexFlow: joined ? 'column' : 'row'}}>
+          <form style={{flexFlow: joined ? 'column' : 'row wrap'}}>
             {
               joined ?
                   <>
