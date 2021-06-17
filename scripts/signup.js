@@ -1,6 +1,6 @@
 import {root} from "./environment";
 
-export function google(message, user) {
+export function google(token) {
     return fetch(`${root}/user`, {
         method: 'post',
         headers: {
@@ -9,8 +9,8 @@ export function google(message, user) {
         body: JSON.stringify({
             token,
             verifier: 'google',
-            created: date.toISOString(),
-            updated: date.toISOString()
+            created: (new Date()).toISOString(),
+            updated: (new Date()).toISOString()
         })
     })
         .then(response => {
