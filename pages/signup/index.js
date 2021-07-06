@@ -104,7 +104,7 @@ export default function Signup() {
         api(undefined);
         return signup(email, password)
             .then(() => {
-                window.location = './verify';
+                window.location = './signup/verify';
             })
             .catch((error) => {
                 api(error.message);
@@ -121,7 +121,7 @@ export default function Signup() {
         api(undefined);
         google(tokenId)
             .then(() => {
-                window.location = './verify';
+                window.location = './signup/verify';
             })
             .catch((error) => {
                 api(error.message)
@@ -138,7 +138,7 @@ export default function Signup() {
         api(undefined);
         facebook()
             .then(() => {
-                window.location = './verify';
+                window.location = './signup/verify';
             })
             .catch((error) => {
                 api(error.message)
