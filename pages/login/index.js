@@ -83,10 +83,10 @@ export default function Login() {
                 loader(false);
             })
     }
-    const googlehandler = ({accessToken}) => {
+    const googlehandler = ({tokenId}) => {
         loader(true);
         api(undefined);
-        google(accessToken)
+        google(tokenId)
             .then(() => {
                 window.location = './dashboard';
             })
