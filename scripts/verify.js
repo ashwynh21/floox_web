@@ -4,7 +4,8 @@ export function verify(user, parameters) {
     return fetch(`${root}/user/verify`, {
         method: 'post',
         headers: {
-            'Authorization': `Bearer ${user.token}`
+            'Authorization': `Bearer ${user.token}`,
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify(parameters)
     })

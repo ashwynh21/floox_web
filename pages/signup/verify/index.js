@@ -14,7 +14,10 @@ export default function Verify() {
 
     useEffect(() => {
         const user = localStorage.getItem('user');
-        const { _id, otp } = router.query;
+
+        const data = new URLSearchParams(window.location.search);
+        const _id = data.get('_id');
+        const otp = data.get('otp');
 
         if(!user) {
             router.push('/login');
@@ -30,7 +33,7 @@ export default function Verify() {
             // run verification process;
             trigger(true);
 
-            return verify(JSON.parse(user), router.query)
+            return verify(JSON.parse(user), { _id, otp })
                 .then((repsonse) => {
                     router.push('/dashboard');
                 })
