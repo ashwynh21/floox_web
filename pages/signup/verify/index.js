@@ -6,6 +6,7 @@ import {useRouter} from "next/router";
 import {useState} from "react";
 import {verify, request} from "../../../scripts/verify";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Head from "next/head";
 
 export default function Verify() {
     const router = useRouter();
@@ -60,6 +61,9 @@ export default function Verify() {
 
     return (
         <form className={styles.signup}>
+            <Head>
+                <title>Floox | Verify</title>
+            </Head>
             <p>Verify <strong>Floox</strong> Account</p>
 
             {

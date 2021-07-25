@@ -2,10 +2,14 @@ import React from "react";
 import Image from "next/image";
 
 import styles from '../../styles/About.module.css';
+import Head from "next/head";
 
 export default function About() {
     return (
         <>
+            <Head>
+                <title>Floox | About us</title>
+            </Head>
             <p className={styles.topic}>
                 Automating the hard parts about Trading
             </p>

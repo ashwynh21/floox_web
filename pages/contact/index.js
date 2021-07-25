@@ -7,6 +7,7 @@ import { count, join } from '../../scripts/beta';
 import { send } from "../../scripts/message";
 
 import styles from '../../styles/Contact.module.css';
+import Head from "next/head";
 
 export default function Contact() {
     const [messaging, deliverer] = useState(false);
@@ -67,6 +68,9 @@ export default function Contact() {
 
     return (
         <>
+            <Head>
+                <title>Floox | Contact us</title>
+            </Head>
             <div className={styles.contact}>
                 <p>Contact Us</p>
                 <p>Hi there, we always busy working on ways to improve the experience of the services offered to our

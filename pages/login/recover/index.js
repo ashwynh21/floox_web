@@ -5,6 +5,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Button from "@material-ui/core/Button";
 import {useRouter} from "next/router";
 import {recover, reset} from "../../../scripts/recover";
+import Head from "next/head";
 
 export default function Recover() {
     const router = useRouter();
@@ -107,6 +108,9 @@ export default function Recover() {
 
     return (
         <form className={styles.signup}>
+            <Head>
+                <title>Floox | Sign up</title>
+            </Head>
             <p>Recover <strong>Floox</strong> Account</p>
             {
                 recovered ? <>
