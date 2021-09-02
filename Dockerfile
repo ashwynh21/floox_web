@@ -18,11 +18,11 @@ RUN npm install -g npm@7.21.1
 EXPOSE 4200
 
 # then clone in the repo
-CMD ['git', 'clone https://github.com/ashwynh21/floox_web.git .']
+CMD git clone https://github.com/ashwynh21/floox_web.git .
 # almost there, now we install dependencies
-CMD ['npm', 'install --unsafe-perm']
+CMD npm install --unsafe-perm
 # build the repo
-CMD ['npm', 'run build']
+CMD npm run build
 
 # then run the start script
-CMD ['npm', 'run start']
+CMD npm run start
