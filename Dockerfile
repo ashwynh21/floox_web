@@ -8,7 +8,7 @@ RUN apk update
 RUN apk add git
 
 # then we configure the token into GIT
-RUN git config --global url."https://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:@github.com/".insteadOf "https://github.com/"
+RUN git config --global url."https://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:@github.com/".insteadOf "https://github.com/"
 # then clone in the repo
 RUN git clone https://github.com/ashwynh21/floox_web.git app
 
