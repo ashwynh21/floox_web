@@ -9,7 +9,6 @@ RUN apk add git
 RUN git config --global url."https://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:@github.com/".insteadOf "https://github.com/"
 
 # then set the working DIR
-WORKDIR /app
 
 # we first update npm
 RUN npm install -g npm@7.21.1
@@ -18,7 +17,9 @@ RUN npm install -g npm@7.21.1
 EXPOSE 4200
 
 # then clone in the repo
-CMD git clone https://github.com/ashwynh21/floox_web.git /app
+CMD git clone https://github.com/ashwynh21/floox_web.git app
+CMD cd app
+
 # almost there, now we install dependencies
 CMD npm install --unsafe-perm
 # build the repo
