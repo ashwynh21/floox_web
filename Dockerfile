@@ -18,9 +18,8 @@ RUN npm install -g npm@7.21.1 --quiet
 EXPOSE 4200
 
 # then clone in the repo
-CMD git clone https://github.com/ashwynh21/floox_web.git app
 CMD ls
-CMD cd app
+CMD git clone https://github.com/ashwynh21/floox_web.git .
 
 # almost there, now we install dependencies
 CMD npm install --unsafe-perm
