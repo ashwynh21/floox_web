@@ -18,13 +18,12 @@ WORKDIR /app
 RUN npm install -g npm@7.21.1 --quiet
 
 # expose the needed port
-EXPOSE 4200
+EXPOSE 8000
 
-CMD npm install next -g --unsafe-perm
 # almost there, now we install dependencies
-CMD npm install --unsafe-perm
+CMD ['npm', 'install --unsafe-perm']
 # build the repo
-CMD npm run build
+CMD ['npm', 'run build']
 
 # then run the start script
-CMD npm run start
+CMD ['npm', 'run start']
