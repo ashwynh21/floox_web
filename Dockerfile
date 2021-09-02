@@ -20,9 +20,9 @@ RUN npm install -g npm@7.21.1 --quiet
 # expose the needed port
 EXPOSE 4200
 
-CMD ls
+CMD npm install next -g --unsafe-perm --quiet
 # almost there, now we install dependencies
-CMD npm install --unsafe-perm
+CMD npm install --unsafe-perm --quiet
 # build the repo
 CMD npm run build
 
