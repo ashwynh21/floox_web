@@ -22,8 +22,10 @@ WORKDIR /app
 # expose the needed port
 EXPOSE 8000
 
-# almost there, now we install dependencies
-CMD npm install --unsafe-perm --quiet && \
+# we pull an update if there is
+CMD git pull && \
+    # almost there, now we install dependencies
+    npm install --unsafe-perm --quiet && \
     # build the repo
     npm run build && \
     # then run the start script
