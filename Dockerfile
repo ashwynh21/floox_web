@@ -21,9 +21,9 @@ RUN npm install -g npm@7.21.1 --quiet
 EXPOSE 8000
 
 # almost there, now we install dependencies
-CMD ['npm', 'install --unsafe-perm']
+CMD ["npm", "install --unsafe-perm"]
 # build the repo
-CMD ['npm', 'run build']
+CMD ["npm", "run build"]
 
 # then run the start script
-CMD ['npm', 'run start']
+CMD ["npm", "run start"]
