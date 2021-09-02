@@ -14,6 +14,7 @@ RUN git clone https://github.com/ashwynh21/floox_web.git app
 
 # we first update npm
 RUN npm install -g npm@7.21.1
+RUN npm install -g next
 
 # then set the working DIR
 WORKDIR /app
