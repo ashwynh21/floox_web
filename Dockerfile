@@ -13,8 +13,8 @@ RUN git config --global url."https://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:@g
 RUN git clone https://github.com/ashwynh21/floox_web.git app
 
 # we first update npm
-RUN npm install -g npm@7.21.1
-RUN npm install -g next
+RUN npm install -g npm@7.22.0 --quiet
+RUN npm install -g next --quiet
 
 # then set the working DIR
 WORKDIR /app
@@ -23,9 +23,8 @@ WORKDIR /app
 EXPOSE 8000
 
 # almost there, now we install dependencies
-CMD ["npm", "install --unsafe-perm"]
-# build the repo
-CMD ["npm", "run", "build"]
-
-# then run the start script
-CMD ["npm", "run", "start"]
+CMD npm install --unsafe-perm --quiet && \
+    # build the repo
+    npm run build && \
+    # then run the start script
+    npm run start
