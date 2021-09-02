@@ -5,8 +5,11 @@ FROM node:14-alpine
 RUN apk update
 # then install GIT
 RUN apk add git
+
 # then we configure the token into GIT
 RUN git config --global url."https://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:@github.com/".insteadOf "https://github.com/"
+# then clone in the repo
+RUN git clone https://github.com/ashwynh21/floox_web.git .
 
 # then set the working DIR
 WORKDIR /usr/app
@@ -17,10 +20,7 @@ RUN npm install -g npm@7.21.1 --quiet
 # expose the needed port
 EXPOSE 4200
 
-# then clone in the repo
 CMD ls
-CMD git clone https://github.com/ashwynh21/floox_web.git .
-
 # almost there, now we install dependencies
 CMD npm install --unsafe-perm
 # build the repo
