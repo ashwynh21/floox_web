@@ -31,4 +31,4 @@ ENV production "true"
 RUN npm run build
 
 # then run the start script
-CMD ["dumb-init", "node", "build/index.bundle.js"]
+CMD ["dumb-init", "next", "start --port 8000"]
