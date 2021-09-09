@@ -31,4 +31,4 @@ ENV production "true"
 RUN npm run build
 
 # then run the start script
-CMD ["dumb-init", "next", "start --port 8000"]
+CMD ["dumb-init", "next start", "--port 8000"]
