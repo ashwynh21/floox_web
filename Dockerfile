@@ -5,6 +5,7 @@ FROM node:14-alpine
 # we first then update the OS
 RUN apk update
 # then install GIT
+RUN apk add dumb-init
 RUN apk add git
 
 # then we configure the token into GIT
