@@ -19,14 +19,15 @@ RUN npm install -g next --quiet
 # then set the working DIR
 WORKDIR /app
 
+# almost there, now we install dependencies
+RUN npm install --unsafe-perm
+
 # expose the needed port
 EXPOSE 8000
 
-# we pull an update if there is
-CMD git pull && \
-    # almost there, now we install dependencies
-    npm install --unsafe-perm --quiet && \
-    # build the repo
-    npm run build && \
-    # then run the start script
-    npm run start
+ENV production "true"
+
+RUN npm run build
+
+# then run the start script
+CMD ["dumb-init", "node", "build/index.bundle.js"]
